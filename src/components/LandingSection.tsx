@@ -1,56 +1,63 @@
 'use client';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import clsx from 'clsx';
 
 export function S1() {
   return (
-    <section className="flex h-auto items-center justify-center bg-teal-400 px-8 sm:h-screen">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
-        viewport={{ once: true }}
-        className="flex w-full max-w-6xl flex-col items-center justify-between"
+    //     .section-page {
+    //   @apply grid w-full flex-col items-center border-b border-violet-800/50 bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.1),_transparent_40%)] px-6 py-20 text-center sm:py-24;
+    // }
+    <div className="page">
+      <section
+        className={clsx(
+          'section-page relative flex min-h-screen justify-center bg-[#0a0a1a] sm:px-8'
+        )}
       >
-        {/* Left: Languages */}
-        <div className="relative mt-4 mr-auto flex items-start text-4xl font-bold text-white sm:-mt-30 md:text-7xl lg:text-8xl">
-          <div>
-            Edgar Rafael Jr.
-            <span className="text-amber-600">*</span>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          viewport={{ once: true }}
+          className="-mt-30 flex h-full w-full max-w-4xl flex-col items-center justify-center text-center"
+        >
+          {/* Name */}
+          <div className="text-4xl font-bold text-gray-100 md:text-6xl lg:text-7xl">
+            Edgar Rafael Jr
+            <span className="text-fuchsia-500">.</span>
           </div>
-        </div>
 
-        {/* Right: Name + Description */}
+          {/* Headline + Description */}
+          <div className="mt-6 max-w-3xl">
+            <h1 className="lg:section-title-h1 bg-white bg-clip-text text-2xl font-bold tracking-wide text-transparent sm:text-4xl md:text-5xl">
+              I&apos;m a{' '}
+              <span className="section-title-span">Software Developer</span>
+            </h1>
+            <p className="mt-4 text-base font-light text-gray-400 md:text-lg">
+              Transforming Ideas into Digital Experiences. Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Libero laudantium veniam,
+              rerum iusto commodi a, saepe id odio officiis ipsa obcaecati
+              voluptatibus ducimus aspernatur placeat suscipit quibusdam
+              voluptate quod eaque.
+            </p>
+          </div>
+        </motion.div>
 
-        <div className="-left mr-auto mb-6 max-w-4xl sm:mb-0">
-          <h1 className="mt-5 text-2xl font-light tracking-wider text-white sm:text-6xl md:text-4xl">
-            I&apos;m a Software Developer.
-          </h1>
-          <p className="mt-4 text-sm font-thin text-white md:text-2xl">
-            Transforming Ideas into Digital Experiences. Lorem ipsum dolor sit,
-            amet consectetur adipisicing elit. Architecto earum totam laborum
-            blanditiis reprehenderit omnis at, ad ratione impedit
-            exercitationem? Tempore temporibus, ad dolorem consectetur tenetur
-            quisquam esse architecto blanditiis.
-          </p>
-        </div>
-        {/* Animated Call-to-Action */}
+        {/* Animated Call-to-Action at bottom */}
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{
-            duration: 1,
+            duration: 1.5, // total cycle
             repeat: Infinity,
             repeatType: 'loop',
-            ease: 'easeInOut',
+            ease: 'linear',
           }}
-          className="mt-40 hidden w-full flex-col items-center text-white sm:flex"
+          className="absolute bottom-25 left-1/2 flex -translate-x-1/2 flex-col items-center text-center"
         >
-          <div className="flex flex-col items-center text-center">
-            <div className="text-white/50">See more!</div>
-            <ArrowDown />
-          </div>
+          <div className="text-sm text-purple-400/80">Scroll Down</div>
+          <ArrowDown className="mt-1 text-purple-400" />
         </motion.div>
-      </motion.div>
-    </section>
+      </section>
+    </div>
   );
 }

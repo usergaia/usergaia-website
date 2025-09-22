@@ -14,3 +14,63 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@import 'tailwindcss';
+
+/* ---------------- DARK MODE ---------------- */
+.nav {
+  @apply rounded-lg border-b-1 border-fuchsia-500/20 bg-fuchsia-950/40 px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-xs transition-colors;
+}
+
+.nav-btn {
+  @apply rounded-lg px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-violet-800/40 hover:text-fuchsia-400 hover:brightness-125;
+}
+
+.nav-text {
+  @apply text-gray-100;
+}
+
+.button {
+  @apply rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-800/20 transition hover:brightness-125 md:block;
+}
+
+.nav-bg {
+  @apply border-b border-violet-800/50 bg-[rgba(10,10,26,0.3)] backdrop-blur-md;
+}
+
+.dark-hero {
+  @apply bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.1),_transparent_40%)];
+}
+
+/* ---------------- Section ---------------- */
+
+.page {
+  @apply flex min-h-screen flex-col bg-[#0a0a1a];
+}
+
+.section-page {
+  @apply grid w-full flex-col items-center border-b border-violet-800/50 bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.1),_transparent_40%)] px-6 py-20 text-center sm:py-24;
+}
+
+.section-subpage {
+  @apply grid w-full flex-col items-center border-b border-violet-800/50 px-6 py-20 text-center sm:py-24;
+}
+
+.section-title-h1 {
+  @apply text-4xl font-bold text-gray-100 sm:text-6xl;
+}
+
+.section-title-span {
+  @apply bg-gradient-to-r from-purple-500 to-fuchsia-500 bg-clip-text text-transparent;
+}
+.section-desc {
+  @apply mx-auto mb-4 max-w-2xl text-base font-thin;
+}
+
+.tall-block-summ {
+  @apply relative overflow-hidden rounded-2xl border border-violet-800/50 transition-all duration-300;
+}
+
+.short-block-summ {
+  @apply flex flex-col overflow-auto rounded-2xl border border-violet-800/50 bg-[rgba(23,23,39,0.6)] p-6 text-white backdrop-blur-md;
+}
