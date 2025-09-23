@@ -11,7 +11,7 @@ export default function Home() {
         <Header />
         <S1 />
         <S2 />
-        <S4 />
+        {/* <S4 /> */}
         <Footer />
       </div>
     </>

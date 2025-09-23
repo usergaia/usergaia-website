@@ -8,7 +8,7 @@ export default function ArcadePage() {
       <main className="flex-1">
         <section className="section-page">
           <h1 className="section-title-h1">
-            <span className="section-title-span">Specialization</span>
+            <span className="section-title-span">Arcade</span>
           </h1>
           <p className="section-desc mt-6 text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt

@@ -1,9 +1,11 @@
 export function Hobby() {
   return (
     <>
-      <div className="flex items-center justify-center bg-fuchsia-500 p-4">
-        testc
-      </div>
+      <section className="section-subpage">
+        <h1 className="section-title-h1">
+          <span className="section-title-span">Beyond the Code</span>
+        </h1>
+      </section>
     </>
   );
 }

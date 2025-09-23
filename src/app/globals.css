@@ -63,6 +63,11 @@
 .section-title-span {
   @apply bg-gradient-to-r from-purple-500 to-fuchsia-500 bg-clip-text text-transparent;
 }
+
+.section-subtitle-h1 {
+  @apply text-2xl font-bold text-gray-100 sm:text-4xl;
+}
+
 .section-desc {
   @apply mx-auto mb-4 max-w-2xl text-base font-thin;
 }
@@ -73,4 +78,15 @@
 
 .short-block-summ {
   @apply flex flex-col overflow-auto rounded-2xl border border-violet-800/50 bg-[rgba(23,23,39,0.6)] p-6 text-white backdrop-blur-md;
+}
+.educ-role {
+  @apply text-[20px];
+}
+
+.educ-name {
+  @apply text-lg;
+}
+
+.educ-year {
+  @apply text-base;
 }

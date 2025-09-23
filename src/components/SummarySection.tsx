@@ -8,7 +8,7 @@ export function S2() {
         <div className="tall-block-summ col-span-1 row-span-1 hover:border-fuchsia-500/80 hover:shadow-2xl hover:shadow-fuchsia-500/20 md:col-span-1 md:row-span-3 lg:col-span-1 lg:row-span-4">
           <Image
             className="object-cover transition-transform duration-500 hover:scale-105"
-            src="/test.jpeg"
+            src="/blob.jpeg"
             alt="Profile picture"
             fill
             sizes="(max-width: 768px) 100vw, 25vw"

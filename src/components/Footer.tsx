@@ -2,6 +2,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaSpotify } from 'react-icons/fa';
+import { FaDiscord } from 'react-icons/fa';
 
 export function Footer() {
   return (
@@ -23,6 +24,7 @@ export function Footer() {
           <div className="flex flex-col items-center space-y-3 sm:items-end">
             <p className="text-lg font-semibold text-gray-200">Links</p>
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-2 text-2xl text-gray-500 sm:justify-end">
+              <FaDiscord className="cursor-pointer hover:text-gray-300" />
               <FaGithub className="cursor-pointer hover:text-gray-300" />
               <FaLinkedin className="cursor-pointer hover:text-gray-300" />
               <FaInstagram className="cursor-pointer hover:text-gray-300" />
