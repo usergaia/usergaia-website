@@ -1,88 +1,124 @@
+'use client';
 import Image from 'next/image';
+import React from 'react';
 
 export function S2() {
+  const skills: string[] = [
+    'UI/UX & Web Design',
+    'React & Next.js',
+    'App Prototyping',
+    'Framer Motion',
+    'Tailwind CSS',
+  ];
+
+  const stack: string[] = [
+    'TypeScript',
+    'Node.js',
+    'Python',
+    'Figma',
+    'Vercel',
+  ];
+
   return (
-    <section className="page m-10 mb-0 items-center">
-      <div className="m-5 grid h-auto w-full max-w-6xl auto-rows-[200px] grid-cols-1 gap-4 sm:m-0 md:h-auto md:auto-rows-auto md:grid-cols-3 lg:h-[600px] lg:grid-cols-4 lg:grid-rows-4 lg:gap-3">
-        {/* IMAGE CARD */}
-        <div className="tall-block-summ col-span-1 row-span-1 hover:border-fuchsia-500/80 hover:shadow-2xl hover:shadow-fuchsia-500/20 md:col-span-1 md:row-span-3 lg:col-span-1 lg:row-span-4">
-          <Image
-            className="object-cover transition-transform duration-500 hover:scale-105"
-            src="/blob.jpeg"
-            alt="Profile picture"
-            fill
-            sizes="(max-width: 768px) 100vw, 25vw"
-          />
-        </div>
+    <section className="relative flex items-center justify-center px-4 py-24 md:px-8 lg:py-32">
+      {/* Background gradient */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-900/40 via-gray-950 to-fuchsia-900/40" />
+      {/* Spotlight effect */}
+      <div className="absolute -top-32 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-purple-600/20 blur-3xl" />
 
-        {/* INTRO / GRADIENT CARD */}
-        <div className="tall-block-summ col-span-1 row-span-2 bg-gradient-to-br from-purple-600 to-fuchsia-600 p-6 lg:col-span-2 lg:row-span-2">
-          <h1 className="text-3xl font-bold text-gray-100">I&apos;M EDGAR!</h1>
-          <p className="section-desc mt-4 text-white">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-            deleniti, excepturi atque ex quae exercitationem deserunt velit
-            ipsum eaque provident inventore assumenda cupiditate, laudantium,
-            eveniet harum dolore expedita ipsam corporis.
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-12">
+        {/* --- Headline Section --- */}
+        <div className="text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Hi, I’m <span className="text-fuchsia-400">ega-cli</span>
+          </h1>
+          <p className="mt-4 text-lg text-gray-400 sm:text-xl">
+            Learn more about Edgar by entering the following command.
           </p>
+          <div className="mt-6 flex justify-center gap-4">
+            <a
+              href="#projects"
+              className="rounded-lg bg-fuchsia-600 px-5 py-2 text-sm font-medium text-white shadow-md transition hover:bg-fuchsia-500"
+            >
+              View Work
+            </a>
+            <a
+              href="#contact"
+              className="rounded-lg border border-gray-600 px-5 py-2 text-sm font-medium text-gray-300 transition hover:border-fuchsia-500 hover:text-fuchsia-400"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
 
-        {/* STACK */}
-        <div className="short-block-summ col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-2">
-          <div className="text-lg font-bold text-gray-100">STACK.</div>
-        </div>
-
-        {/* SKILLS */}
-        <div className="short-block-summ col-span-1 row-span-1 justify-between md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-2">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-lg font-bold">SKILLS</span>
-              <span className="text-xl">✨</span>
+        {/* --- Content Grid --- */}
+        <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3">
+          {/* --- CLI Terminal Card --- */}
+          <div className="flex h-full min-h-[600px] flex-col overflow-hidden rounded-2xl bg-gray-900/70 shadow-2xl backdrop-blur-md lg:col-span-2">
+            {/* Terminal Header */}
+            <div className="flex items-center rounded-t-2xl bg-gray-800/80 px-4 py-3">
+              <div className="mr-2 h-3 w-3 rounded-full bg-red-500" />
+              <div className="mr-2 h-3 w-3 rounded-full bg-yellow-500" />
+              <div className="h-3 w-3 rounded-full bg-green-500" />
+              <p className="flex-grow text-center text-xs font-light text-gray-400">
+                /Users/Edgar/Portfolio
+              </p>
             </div>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li>UI/UX Design</li>
-              <li>Web Design</li>
-              <li>App Design</li>
-              <li>Logo Design</li>
-              <li>Framer Development</li>
-            </ul>
-          </div>
-        </div>
 
-        {/* RECENT PROJECTS */}
-        <div className="short-block-summ col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-2">
-          <div className="text-lg font-bold text-gray-100">RECENT PROJECTS</div>
-          <div className="mt-4 space-y-3 text-sm">
-            <div>
-              <div className="font-semibold text-gray-200">Koncepted</div>
-              <div className="text-gray-400">2023-00</div>
-              <div className="text-gray-500">Web Design</div>
+            {/* Terminal Body */}
+            <div className="flex-grow p-6 font-mono text-sm">
+              {/* -- About Me -- */}
+              <div className="mb-6">
+                <div className="flex items-center text-gray-200">
+                  <span className="text-green-400">→</span>
+                  <span className="ml-2 font-bold">whoami</span>
+                </div>
+                <div className="mt-2 pl-6 leading-relaxed text-gray-300">
+                  I&apos;m a passionate developer and designer with a knack for
+                  turning complex ideas into beautiful, intuitive digital
+                  experiences.
+                </div>
+              </div>
+
+              {/* -- Skills -- */}
+              <div className="mb-6">
+                <div className="flex items-center text-gray-200">
+                  <span className="text-green-400">→</span>
+                  <span className="ml-2 font-bold">cat skills.txt</span>
+                </div>
+                <ul className="mt-2 grid grid-cols-2 gap-x-6 pl-6 leading-relaxed text-gray-300">
+                  {skills.map((skill) => (
+                    <li key={skill}>- {skill}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* -- Stack -- */}
+              <div>
+                <div className="flex items-center text-gray-200">
+                  <span className="text-green-400">→</span>
+                  <span className="ml-2 font-bold">ls stack/</span>
+                </div>
+                <ul className="mt-2 grid grid-cols-2 gap-x-6 pl-6 leading-relaxed text-gray-300">
+                  {stack.map((item) => (
+                    <li key={item}>- {item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <div className="font-semibold text-gray-200">WeVPN</div>
-              <div className="text-gray-400">2021-2024</div>
-              <div className="text-gray-500">Web Design</div>
-            </div>
           </div>
-        </div>
 
-        {/* TIME */}
-        <div className="no-scrollbar short-block-summ col-span-1 row-span-1 items-center justify-center md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
-          <div className="text-4xl font-bold">8:30</div>
-          <div className="text-4xl font-bold text-fuchsia-500">PM</div>
-          <div className="mt-2 text-xs text-gray-400">
-            MON, SEP 22 IN MANILA
+          {/* --- IMAGE CARD --- */}
+          <div className="relative hidden min-h-[600px] overflow-hidden rounded-2xl lg:block">
+            <Image
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+              src="/blob.jpeg"
+              alt="Profile placeholder"
+              fill
+              sizes="33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
           </div>
-        </div>
-
-        {/* LOCATION & CV */}
-        <div className="short-block-summ col-span-1 row-span-1 items-center justify-center space-y-3 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
-          <div className="text-xs font-bold">📍 Manila, Philippines</div>
-          <div className="text-xs text-green-400">
-            🟢 Available for projects
-          </div>
-          <button className="h-10 w-full cursor-pointer rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-sm font-semibold text-white transition hover:brightness-110 lg:h-full">
-            Download CV
-          </button>
         </div>
       </div>
     </section>

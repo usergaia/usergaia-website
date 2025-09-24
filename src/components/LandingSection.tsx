@@ -24,7 +24,7 @@ export function S1() {
           {/* Name */}
           <div className="text-4xl font-bold text-gray-100 md:text-6xl lg:text-7xl">
             Edgar Rafael Jr
-            <span className="text-fuchsia-500">.</span>
+            <span className="text-cyan-400">.</span>{' '}
           </div>
 
           {/* Headline + Description */}
@@ -52,10 +52,10 @@ export function S1() {
             repeatType: 'loop',
             ease: 'linear',
           }}
-          className="absolute bottom-25 left-1/2 flex -translate-x-1/2 flex-col items-center text-center"
+          className="absolute bottom-40 left-1/2 flex -translate-x-1/2 flex-col items-center text-center"
         >
-          <div className="text-sm text-purple-400/80">Scroll Down</div>
-          <ArrowDown className="mt-1 text-purple-400" />
+          <div className="text-sm text-cyan-400/80">Scroll Down</div>
+          <ArrowDown className="mt-1 text-cyan-400" />
         </motion.div>
       </section>
     </div>

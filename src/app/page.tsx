@@ -11,7 +11,23 @@ export default function Home() {
         <Header />
         <S1 />
         <S2 />
-        {/* <S4 /> */}
+
+        <div className="flex w-full flex-col items-center justify-center border-t border-violet-800/50 bg-[#121228] p-8 text-center text-white">
+          {/* Heading */}
+          <h1 className="mr-2 mb-4 text-left text-7xl font-bold">
+            <span className="section-title-span">Shall we?</span>
+          </h1>
+          {/* Paragraph text color updated */}
+          <p className="section-desc text-left">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+            temporibus in quidem ipsam.
+          </p>
+
+          {/* Button */}
+          <button className="button h-12 w-60">Email Me</button>
+        </div>
+        {/* <S4/> */}
+
         <Footer />
       </div>
     </>

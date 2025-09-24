@@ -3,7 +3,7 @@ import { Footer } from '@/components/Footer';
 
 export default function ArcadePage() {
   return (
-    <div className="page">
+    <div className="page min-h-screen">
       <Header />
       <main className="flex-1">
         <section className="section-page">

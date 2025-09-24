@@ -19,7 +19,7 @@ export function Header() {
           onClick={() => setOpen(!open)}
         >
           e_ga_
-          <span className="text-fuchsia-500">.</span>
+          <span className="text-cyan-500">.</span>
           <ChevronDown className={clsx('mt-1 ml-2 text-gray-400 lg:hidden')} />
         </div>
 

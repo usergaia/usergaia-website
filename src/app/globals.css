@@ -1,11 +1,38 @@
+/* This file uses Tailwind's @apply directive.
+  Ensure it's processed by your build tool (like PostCSS).
+  You will also need to import the Google Fonts in your main HTML file (e.g., index.html)
+  for the custom typography to work:
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+*/
+
 @import 'tailwindcss';
 
+/* Apply base font styles and colors */
+@layer base {
+  body {
+    @apply bg-[#0D1117] font-sans text-[#E6EDF3] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono font-light;
+    font-family: 'Roboto Mono', monospace;
+  }
+}
+
+/* ---------------- UTILITIES ---------------- */
 .hide-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #ccc #f0f0f0;
 }
 
-/* hide scrollbar for Chrome, Safari, Edge */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -15,15 +42,15 @@
   scrollbar-width: none; /* Firefox */
 }
 
-@import 'tailwindcss';
-
-/* ---------------- DARK MODE ---------------- */
+/* ---------------- THEMED COMPONENTS ---------------- */
 .nav {
-  @apply rounded-lg border-b-1 border-fuchsia-500/20 bg-fuchsia-950/40 px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-xs transition-colors;
+  /* Using the new glass effect: semi-transparent dark bg with a subtle white border */
+  @apply rounded-lg border border-white/10 bg-[#171d28]/60 px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-md transition-colors;
 }
 
 .nav-btn {
-  @apply rounded-lg px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-violet-800/40 hover:text-fuchsia-400 hover:brightness-125;
+  /* Hover state now uses the cyan accent color */
+  @apply rounded-lg px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-cyan-400/10 hover:text-cyan-400;
 }
 
 .nav-text {
@@ -31,29 +58,34 @@
 }
 
 .button {
-  @apply rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-800/20 transition hover:brightness-125 md:block;
+  /* Button uses the solid cyan accent background */
+  @apply rounded-md bg-cyan-400 px-4 py-2 text-sm font-semibold text-gray-900 shadow-lg shadow-cyan-500/20 transition hover:opacity-90 md:block;
 }
 
 .nav-bg {
-  @apply border-b border-violet-800/50 bg-[rgba(10,10,26,0.3)] backdrop-blur-md;
+  /* This is the same as the .nav style for consistency */
+  @apply border-b border-white/10 bg-[#171d28]/60 backdrop-blur-md;
 }
 
 .dark-hero {
-  @apply bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.1),_transparent_40%)];
+  /* Replaced purple radial gradient with a more subtle cyan one */
+  @apply bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.05),_transparent_40%)];
 }
 
-/* ---------------- Section ---------------- */
+/* ---------------- SECTION STYLES ---------------- */
 
 .page {
-  @apply flex min-h-screen flex-col bg-[#0a0a1a];
+  /* Main page background color from the new theme */
+  @apply flex flex-col bg-[#0D1117];
 }
 
 .section-page {
-  @apply grid w-full flex-col items-center border-b border-violet-800/50 bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.1),_transparent_40%)] px-6 py-20 text-center sm:py-24;
+  /* Section with the subtle cyan radial gradient */
+  @apply grid w-full flex-col items-center border-b border-white/10 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.05),_transparent_40%)] px-6 py-20 text-center sm:py-24;
 }
 
 .section-subpage {
-  @apply grid w-full flex-col items-center border-b border-violet-800/50 px-6 py-20 text-center sm:py-24;
+  @apply grid w-full flex-col items-center border-b border-white/10 px-6 py-20 text-center;
 }
 
 .section-title-h1 {
@@ -61,7 +93,8 @@
 }
 
 .section-title-span {
-  @apply bg-gradient-to-r from-purple-500 to-fuchsia-500 bg-clip-text text-transparent;
+  /* Replaced purple/fuchsia gradient with the solid cyan accent color */
+  @apply text-cyan-400;
 }
 
 .section-subtitle-h1 {
@@ -69,24 +102,39 @@
 }
 
 .section-desc {
-  @apply mx-auto mb-4 max-w-2xl text-base font-thin;
+  @apply mx-auto mb-4 max-w-2xl text-base font-normal; /* Changed from font-thin for better readability with Inter */
 }
 
 .tall-block-summ {
-  @apply relative overflow-hidden rounded-2xl border border-violet-800/50 transition-all duration-300;
+  /* Card style using the new glass effect */
+  @apply relative overflow-hidden rounded-2xl border border-white/10 bg-[#171d28]/60 backdrop-blur-md transition-all duration-300;
 }
 
 .short-block-summ {
-  @apply flex flex-col overflow-auto rounded-2xl border border-violet-800/50 bg-[rgba(23,23,39,0.6)] p-6 text-white backdrop-blur-md;
+  /* Card style using the new glass effect */
+  @apply flex flex-col overflow-auto rounded-2xl border border-white/10 bg-[#171d28]/60 p-6 text-white backdrop-blur-md;
 }
+
 .educ-role {
-  @apply text-[20px];
+  @apply text-left text-[20px] font-bold text-cyan-400; /* Added accent to the role */
 }
 
 .educ-name {
-  @apply text-lg;
+  @apply text-left font-serif text-lg;
 }
 
 .educ-year {
-  @apply text-base;
+  @apply text-left font-mono text-sm font-thin text-gray-400; /* Lightened for contrast */
+}
+
+.educ-desc {
+  @apply text-left text-base text-gray-300;
+}
+
+.project-card-container {
+  @apply mx-auto flex flex-col justify-center gap-6 md:grid md:max-w-5xl md:grid-cols-2 md:gap-8;
+}
+
+.project-card {
+  @apply rounded-xl bg-gray-800;
 }

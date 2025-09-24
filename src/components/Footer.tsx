@@ -12,7 +12,7 @@ export function Footer() {
           {/* Branding / Copyright - Placed on the left */}
           <div className="text-center sm:text-left">
             <div className="mb-2 text-2xl font-bold text-gray-100">
-              e_ga_<span className="text-fuchsia-500">.</span>
+              e_ga_<span className="text-cyan-500">.</span>
             </div>
             <p className="text-sm text-gray-500">
               &copy; {new Date().getFullYear()} Edgar Rafael Jr. | All rights
