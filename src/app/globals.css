@@ -1,36 +1,40 @@
-/* This file uses Tailwind's @apply directive.
-  Ensure it's processed by your build tool (like PostCSS).
-  You will also need to import the Google Fonts in your main HTML file (e.g., index.html)
-  for the custom typography to work:
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-*/
-
 @import 'tailwindcss';
 
 /* Apply base font styles and colors */
 @layer base {
   body {
-    @apply bg-[#0D1117] font-sans text-[#E6EDF3] antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-[#0D1117] text-[#E6EDF3] antialiased;
+    font-family: var(--font-dm-sans), sans-serif;
+    font-weight: 400;
   }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-mono font-light;
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  strong,
+  b {
+    font-weight: 600;
   }
 }
 
 /* ---------------- UTILITIES ---------------- */
 .hide-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #ccc #f0f0f0;
+  scrollbar-color: #22d3ee #0d1117;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -38,18 +42,16 @@
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* ---------------- THEMED COMPONENTS ---------------- */
 .nav {
-  /* Using the new glass effect: semi-transparent dark bg with a subtle white border */
   @apply rounded-lg border border-white/10 bg-[#171d28]/60 px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-md transition-colors;
 }
 
 .nav-btn {
-  /* Hover state now uses the cyan accent color */
   @apply rounded-lg px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-cyan-400/10 hover:text-cyan-400;
 }
 
@@ -58,29 +60,23 @@
 }
 
 .button {
-  /* Button uses the solid cyan accent background */
   @apply rounded-md bg-cyan-400 px-4 py-2 text-sm font-semibold text-gray-900 shadow-lg shadow-cyan-500/20 transition hover:opacity-90 md:block;
 }
 
 .nav-bg {
-  /* This is the same as the .nav style for consistency */
   @apply border-b border-white/10 bg-[#171d28]/60 backdrop-blur-md;
 }
 
 .dark-hero {
-  /* Replaced purple radial gradient with a more subtle cyan one */
   @apply bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.05),_transparent_40%)];
 }
 
 /* ---------------- SECTION STYLES ---------------- */
-
 .page {
-  /* Main page background color from the new theme */
   @apply flex flex-col bg-[#0D1117];
 }
 
 .section-page {
-  /* Section with the subtle cyan radial gradient */
   @apply grid w-full flex-col items-center border-b border-white/10 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.05),_transparent_40%)] px-6 py-20 text-center sm:py-24;
 }
 
@@ -89,46 +85,46 @@
 }
 
 .section-title-h1 {
-  @apply text-4xl font-bold text-gray-100 sm:text-6xl;
+  @apply text-4xl font-medium text-gray-100 sm:text-6xl; /* Changed from font-bold to font-medium */
+  letter-spacing: -0.02em;
 }
 
 .section-title-span {
-  /* Replaced purple/fuchsia gradient with the solid cyan accent color */
   @apply text-cyan-400;
 }
 
 .section-subtitle-h1 {
-  @apply text-2xl font-bold text-gray-100 sm:text-4xl;
+  @apply text-2xl font-medium text-gray-100 sm:text-4xl; /* Changed from font-bold */
+  letter-spacing: -0.02em;
 }
 
 .section-desc {
-  @apply mx-auto mb-4 max-w-2xl text-base font-normal; /* Changed from font-thin for better readability with Inter */
+  @apply mx-auto mb-4 max-w-2xl text-base leading-relaxed font-normal text-gray-300;
 }
 
 .tall-block-summ {
-  /* Card style using the new glass effect */
   @apply relative overflow-hidden rounded-2xl border border-white/10 bg-[#171d28]/60 backdrop-blur-md transition-all duration-300;
 }
 
 .short-block-summ {
-  /* Card style using the new glass effect */
   @apply flex flex-col overflow-auto rounded-2xl border border-white/10 bg-[#171d28]/60 p-6 text-white backdrop-blur-md;
 }
 
 .educ-role {
-  @apply text-left text-[20px] font-bold text-cyan-400; /* Added accent to the role */
+  @apply text-left text-[20px] font-medium;
 }
 
 .educ-name {
-  @apply text-left font-serif text-lg;
+  @apply text-left text-sm font-normal;
 }
 
 .educ-year {
-  @apply text-left font-mono text-sm font-thin text-gray-400; /* Lightened for contrast */
+  @apply text-left text-xs font-normal;
+  font-family: var(--font-jetbrains-mono), monospace;
 }
 
 .educ-desc {
-  @apply text-left text-base text-gray-300;
+  @apply text-left text-base font-normal;
 }
 
 .project-card-container {
@@ -136,5 +132,13 @@
 }
 
 .project-card {
-  @apply rounded-xl bg-gray-800;
+  @apply rounded-xl border-2 border-cyan-400/20 bg-gray-800 transition-all duration-300 hover:border-cyan-400/60 hover:bg-gray-800/80 hover:shadow-2xl hover:shadow-cyan-400/20;
+}
+
+.contrib-card-container {
+  @apply flex flex-col justify-center;
+}
+
+.contrib-card {
+  @apply rounded-xl bg-gray-800 backdrop-blur-md transition-all duration-300 hover:bg-gray-800/80;
 }

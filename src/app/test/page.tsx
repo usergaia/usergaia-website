@@ -1,33 +1,23 @@
 import React from 'react';
+import { techStack } from '@/data/Stack';
 
 export default function Test() {
   return (
-    <>
-      <div className="mx-auto grid w-full grid-cols-2 gap-0">
+    <div className="flex flex-wrap items-center justify-center gap-8 py-12">
+      {techStack.map(({ name, icon, color }) => (
         <div
-          className="relative overflow-hidden rounded-full border-8 shadow-lg"
-          style={{
-            width: '19rem', // Change this to resize the frame
-            height: '19rem',
-            padding: '0em', // Outer padding to create outline effect
-          }}
+          key={name}
+          className={`group flex h-16 w-16 items-center rounded-full bg-green-400 ${color} cursor-pointer overflow-hidden shadow-lg transition-all duration-300 hover:w-48`}
+          style={{ minWidth: '4rem' }}
         >
-          <div className="relative h-full w-full overflow-hidden rounded-full bg-white">
-            test
-          </div>
+          <span className="flex h-16 w-16 items-center justify-center text-2xl">
+            {icon}
+          </span>
+          <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-xs group-hover:opacity-100">
+            {name}
+          </span>
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="section-title-h1 mt-5">
-            <span className="section-title-span">Behind the Code</span>
-          </h1>
-          <p className="section-desc mt-6 text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            assumenda iure sit incidunt voluptatem voluptas autem vel, ab
-            deleniti nulla doloribus natus eaque ipsam. Natus ex magni dolorum
-            omnis quae!
-          </p>
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }

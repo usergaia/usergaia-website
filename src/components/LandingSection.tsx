@@ -22,10 +22,10 @@ export function S1() {
           className="-mt-30 flex h-full w-full max-w-4xl flex-col items-center justify-center text-center"
         >
           {/* Name */}
-          <div className="text-4xl font-bold text-gray-100 md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-bold text-gray-100 md:text-6xl lg:text-7xl">
             Edgar Rafael Jr
             <span className="text-cyan-400">.</span>{' '}
-          </div>
+          </h1>
 
           {/* Headline + Description */}
           <div className="mt-6 max-w-3xl">
