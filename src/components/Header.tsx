@@ -35,7 +35,7 @@ export function Header() {
           {links.map((item) => (
             <a
               key={item}
-              target={`${item.toLowerCase() === 'portfolio' ? '_blank' : undefined}`}
+              target={`${item.toLowerCase() === 'portfolio' ? '_blank' : '_self'}`}
               rel={`${item.toLowerCase() === 'portfolio' ? 'noopener noreferrer' : undefined}`}
               href={`${item.toLowerCase() === 'home' || item.toLowerCase() === 'portfolio' ? '/' : `/${item.toLowerCase()}`}`}
               className="nav-btn"
@@ -65,7 +65,7 @@ export function Header() {
           {links.map((item) => (
             <a
               key={item}
-              target={`${item.toLowerCase() === 'portfolio' ? '_blank' : undefined}`}
+              target={`${item.toLowerCase() === 'portfolio' ? '_blank' : '_self'}`}
               rel={`${item.toLowerCase() === 'portfolio' ? 'noopener noreferrer' : undefined}`}
               href={`${item.toLowerCase() === 'home' || item.toLowerCase() === 'portfolio' ? '/' : `/${item.toLowerCase()}`}`}
               onClick={() => setOpen(false)}

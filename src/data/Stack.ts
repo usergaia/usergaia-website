@@ -1,16 +1,224 @@
-export const techStack = [
-  { name: 'Next.js', icon: '➡️', bgColor: 'bg-gray-800', color: 'text-white' },
+import { IconType } from 'react-icons';
+import {
+  FaReact,
+  FaGithub,
+  FaJava,
+  FaDocker,
+  FaGit,
+  FaPython,
+} from 'react-icons/fa';
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiJavascript,
+  SiDart,
+  SiFlutter,
+  SiDaisyui,
+  SiChartdotjs,
+  SiExpress,
+  SiFlask,
+  SiMongodb,
+  SiKeras,
+  SiTensorflow,
+  SiScikitlearn,
+  SiPandas,
+  SiNodemon,
+  SiPrettier,
+  SiEslint,
+} from 'react-icons/si';
+
+export type TechStackItem = {
+  name: string;
+  icon: IconType;
+  color: string;
+  bgColor: string;
+  group: 'Framework' | 'Language' | 'UI' | 'ML' | 'DevTools';
+};
+
+export const techStack: TechStackItem[] = [
+  // Framework
+  {
+    name: 'Next.js',
+    icon: SiNextdotjs,
+    color: 'text-gray-900',
+    bgColor: 'bg-white',
+    group: 'Framework',
+  },
+  {
+    name: 'Express.js',
+    icon: SiExpress,
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-200',
+    group: 'Framework',
+  },
+  {
+    name: 'Flask',
+    icon: SiFlask,
+    color: 'text-black',
+    bgColor: 'bg-gray-100',
+    group: 'Framework',
+  },
+  {
+    name: 'React Native',
+    icon: FaReact,
+    color: 'text-cyan-900',
+    bgColor: 'bg-cyan-200',
+    group: 'Framework',
+  },
+  {
+    name: 'Flutter',
+    icon: SiFlutter,
+    color: 'text-blue-700',
+    bgColor: 'bg-blue-100',
+    group: 'Framework',
+  },
+
+  // Language
   {
     name: 'TypeScript',
-    icon: '🛠️',
-    bgColor: 'bg-blue-600',
-    color: 'text-white',
+    icon: SiTypescript,
+    color: 'text-blue-700',
+    bgColor: 'bg-blue-200',
+    group: 'Language',
+  },
+  {
+    name: 'JavaScript',
+    icon: SiJavascript,
+    color: 'text-yellow-700',
+    bgColor: 'bg-yellow-200',
+    group: 'Language',
+  },
+  {
+    name: 'Python',
+    icon: FaPython,
+    color: 'text-yellow-600',
+    bgColor: 'bg-yellow-100',
+    group: 'Language',
+  },
+  {
+    name: 'Java',
+    icon: FaJava,
+    color: 'text-orange-700',
+    bgColor: 'bg-orange-200',
+    group: 'Language',
+  },
+  {
+    name: 'Dart',
+    icon: SiDart,
+    color: 'text-blue-800',
+    bgColor: 'bg-blue-200',
+    group: 'Language',
+  },
+
+  // UI
+  {
+    name: 'React',
+    icon: FaReact,
+    color: 'text-cyan-800',
+    bgColor: 'bg-cyan-100',
+    group: 'UI',
   },
   {
     name: 'Tailwind CSS',
-    icon: '💨',
-    bgColor: 'bg-teal-500',
-    color: 'text-black',
+    icon: SiTailwindcss,
+    color: 'text-cyan-700',
+    bgColor: 'bg-cyan-200',
+    group: 'UI',
   },
-  { name: 'React', icon: '⚛️', bgColor: 'bg-cyan-600', color: 'text-white' },
+  {
+    name: 'DaisyUI',
+    icon: SiDaisyui,
+    color: 'text-purple-700',
+    bgColor: 'bg-purple-200',
+    group: 'UI',
+  },
+  {
+    name: 'Chart.js',
+    icon: SiChartdotjs,
+    color: 'text-pink-700',
+    bgColor: 'bg-pink-200',
+    group: 'UI',
+  },
+
+  // ML
+  {
+    name: 'Keras',
+    icon: SiKeras,
+    color: 'text-red-700',
+    bgColor: 'bg-red-200',
+    group: 'ML',
+  },
+  {
+    name: 'TensorFlow',
+    icon: SiTensorflow,
+    color: 'text-orange-700',
+    bgColor: 'bg-orange-200',
+    group: 'ML',
+  },
+  {
+    name: 'Scikit-learn',
+    icon: SiScikitlearn,
+    color: 'text-orange-800',
+    bgColor: 'bg-orange-100',
+    group: 'ML',
+  },
+  {
+    name: 'Pandas',
+    icon: SiPandas,
+    color: 'text-purple-800',
+    bgColor: 'bg-purple-100',
+    group: 'ML',
+  },
+
+  // DevTools
+  {
+    name: 'Nodemon',
+    icon: SiNodemon,
+    color: 'text-green-700',
+    bgColor: 'bg-green-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'Prettier',
+    icon: SiPrettier,
+    color: 'text-yellow-700',
+    bgColor: 'bg-yellow-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'ESLint',
+    icon: SiEslint,
+    color: 'text-purple-700',
+    bgColor: 'bg-purple-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'Docker',
+    icon: FaDocker,
+    color: 'text-blue-700',
+    bgColor: 'bg-blue-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'Git',
+    icon: FaGit,
+    color: 'text-red-700',
+    bgColor: 'bg-red-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'GitHub',
+    icon: FaGithub,
+    color: 'text-gray-900',
+    bgColor: 'bg-gray-200',
+    group: 'DevTools',
+  },
+  {
+    name: 'MongoDB',
+    icon: SiMongodb,
+    color: 'text-green-800',
+    bgColor: 'bg-green-100',
+    group: 'DevTools',
+  },
 ];
