@@ -1,4 +1,5 @@
 import { IconType } from 'react-icons';
+import { LucideIcon } from 'lucide-react';
 
 export type ProjectProps = {
   name: string;
@@ -26,6 +27,22 @@ export type EducProps = {
 
 export type LinkProps = {
   name: string;
-  icon: IconType;
+  icon: IconType | LucideIcon;
   url: string;
+};
+
+export type StackProps = {
+  name: string;
+  icon: IconType | LucideIcon;
+  color: string;
+  bgColor: string;
+  group: 'Framework' | 'Language' | 'UI' | 'Machine Learning' | 'DevTools';
+};
+
+export type CertProps = {
+  title: string;
+  provider: string;
+  dateRec: Date;
+  link: string;
+  logo: string;
 };

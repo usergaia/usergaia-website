@@ -25,13 +25,13 @@ export function S2() {
       <div className="absolute -top-32 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-purple-600/20 blur-3xl" />
 
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-12">
-        {/* --- Headline Section --- */}
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Hi, I’m <span className="text-fuchsia-400">ega-cli</span>
+            Nice to meet you!
+            {/* <span className="text-fuchsia-400">ega-cli</span> */}
           </h1>
           <p className="mt-4 text-lg text-gray-400 sm:text-xl">
-            Learn more about Edgar by entering the following command.
+            Learn more about me by entering the following command.
           </p>
           <div className="mt-6 flex justify-center gap-4">
             <a
@@ -50,7 +50,6 @@ export function S2() {
         </div>
 
         <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3">
-          {/* --- CLI Terminal Card --- */}
           <div className="flex h-full min-h-[500px] flex-col overflow-hidden rounded-2xl bg-gray-900/70 shadow-2xl backdrop-blur-md lg:col-span-2">
             {/* Terminal Header */}
             <div className="flex items-center rounded-t-2xl bg-gray-800/80 px-4 py-3">

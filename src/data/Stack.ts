@@ -1,4 +1,5 @@
-import { IconType } from 'react-icons';
+import { StackProps } from '@/types/component.types';
+
 import {
   FaReact,
   FaGithub,
@@ -26,17 +27,10 @@ import {
   SiNodemon,
   SiPrettier,
   SiEslint,
+  SiLucide,
 } from 'react-icons/si';
 
-export type TechStackItem = {
-  name: string;
-  icon: IconType;
-  color: string;
-  bgColor: string;
-  group: 'Framework' | 'Language' | 'UI' | 'ML' | 'DevTools';
-};
-
-export const techStack: TechStackItem[] = [
+export const techStack: StackProps[] = [
   // Framework
   {
     name: 'Next.js',
@@ -140,35 +134,42 @@ export const techStack: TechStackItem[] = [
     bgColor: 'bg-pink-200',
     group: 'UI',
   },
+  {
+    name: 'Lucide',
+    icon: SiLucide,
+    color: 'text-white',
+    bgColor: 'bg-rose-500',
+    group: 'UI',
+  },
 
-  // ML
+  // Machine Learning
   {
     name: 'Keras',
     icon: SiKeras,
     color: 'text-red-700',
     bgColor: 'bg-red-200',
-    group: 'ML',
+    group: 'Machine Learning',
   },
   {
     name: 'TensorFlow',
     icon: SiTensorflow,
     color: 'text-orange-700',
     bgColor: 'bg-orange-200',
-    group: 'ML',
+    group: 'Machine Learning',
   },
   {
     name: 'Scikit-learn',
     icon: SiScikitlearn,
     color: 'text-orange-800',
     bgColor: 'bg-orange-100',
-    group: 'ML',
+    group: 'Machine Learning',
   },
   {
     name: 'Pandas',
     icon: SiPandas,
     color: 'text-purple-800',
     bgColor: 'bg-purple-100',
-    group: 'ML',
+    group: 'Machine Learning',
   },
 
   // DevTools

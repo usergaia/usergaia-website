@@ -45,7 +45,9 @@ export const projects: ProjectProps[] = [
       'MongoDB',
       'Redis',
     ],
-    weblink: 'https://tickr-alpha.vercel.app/',
+    // weblink: 'https://tickr-alpha.vercel.app/',
+    weblink: null,
+
     ghlink: 'https://github.com/usergaia/Tickr',
   },
   {

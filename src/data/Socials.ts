@@ -7,8 +7,9 @@ import {
   FaDev,
   FaCodepen,
 } from 'react-icons/fa';
+import { LinkProps } from '@/types/component.types';
 
-export const socialLinks = [
+export const socialLinks: LinkProps[] = [
   {
     name: 'Discord',
     icon: FaDiscord,
