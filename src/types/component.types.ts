@@ -22,7 +22,6 @@ export type EducProps = {
   yearStart: number;
   yearEnd: number | string;
   role: string;
-  desc: string;
 };
 
 export type LinkProps = {

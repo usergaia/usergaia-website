@@ -1,7 +1,7 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { Education } from './components/Education';
-import { Hobby } from './components/Hobby';
+import { Education } from './about.components/Education';
+import { Hobby } from './about.components/Hobby';
 import Image from 'next/image';
 
 export default function AboutPage() {

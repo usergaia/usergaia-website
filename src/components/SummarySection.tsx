@@ -20,7 +20,7 @@ export function S2() {
   ];
 
   return (
-    <section className="relative flex items-center justify-center px-4 py-24 md:px-8 lg:py-32">
+    <section className="relative flex items-center justify-center px-4 py-20 md:px-8">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-900/40 via-gray-950 to-fuchsia-900/40" />
       <div className="absolute -top-32 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-purple-600/20 blur-3xl" />
 
@@ -50,7 +50,7 @@ export function S2() {
         </div>
 
         <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3">
-          <div className="flex h-full min-h-[500px] flex-col overflow-hidden rounded-2xl bg-gray-900/70 shadow-2xl backdrop-blur-md lg:col-span-2">
+          <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-gray-900/70 shadow-2xl backdrop-blur-md lg:col-span-2">
             {/* Terminal Header */}
             <div className="flex items-center rounded-t-2xl bg-gray-800/80 px-4 py-3">
               <div className="mr-2 h-3 w-3 rounded-full bg-red-500" />
@@ -104,7 +104,7 @@ export function S2() {
           </div>
 
           {/* --- IMAGE CARD --- */}
-          <div className="relative hidden min-h-[500px] overflow-hidden rounded-2xl lg:block">
+          <div className="relative hidden h-full min-h-[450px] overflow-hidden rounded-2xl lg:block">
             <Image
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               src="/blob.jpeg"

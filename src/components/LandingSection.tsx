@@ -26,14 +26,14 @@ export function S1() {
 
           <div className="mt-6 w-full max-w-3xl text-left">
             <div className="lg:section-title-h1 flex flex-wrap items-center bg-white bg-clip-text text-left text-2xl font-bold tracking-wide text-transparent sm:text-4xl md:text-5xl">
-              <span className="text-4xl">I</span>{' '}
-              <span className="section-title-span ml-1 flex text-4xl">
+              <span className="md:text-4xl">I</span>{' '}
+              <span className="section-title-span ml-1 flex md:text-4xl">
                 <TextType
                   text={[
                     'am a Software Developer.',
                     '... uhh... develop softwares..?',
-                    'am sleep-deprived.',
                     'play games... lots of games.',
+                    'am sleep-deprived.',
                     "love coding (i don't)",
                   ]}
                   typingSpeed={100}
@@ -55,17 +55,25 @@ export function S1() {
         </motion.div>
 
         <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatType: 'loop',
-            ease: 'linear',
-          }}
-          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center text-center sm:bottom-40"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          viewport={{ once: true }}
+          className="absolute bottom-40 left-1/2 flex -translate-x-1/2 flex-col items-center text-center"
         >
-          <div className="text-sm text-cyan-400/80">Scroll Down</div>
-          <ArrowDown className="mt-1 text-cyan-400" />
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: 'loop',
+              ease: 'linear',
+            }}
+            className="flex flex-col items-center"
+          >
+            <div className="text-sm text-cyan-400/80">Scroll Down</div>
+            <ArrowDown className="mt-1 text-cyan-400" />
+          </motion.div>
         </motion.div>
       </section>
     </div>

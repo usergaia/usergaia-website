@@ -51,7 +51,7 @@
 
 /* ---------------- THEMED COMPONENTS ---------------- */
 .nav {
-  @apply rounded-lg border border-white/10 bg-[#171d28]/60 px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-md transition-colors;
+  @apply rounded-lg border border-white/10 bg-[#171d28]/60 px-3 text-sm font-medium text-gray-300 backdrop-blur-md transition-colors;
 }
 
 .nav-btn {
@@ -118,20 +118,16 @@
 /* ---------------- EDUC ---------------- */
 
 .educ-role {
-  @apply text-left text-[20px] font-medium;
+  @apply text-left leading-tight font-bold tracking-tight;
 }
 
 .educ-name {
-  @apply text-left text-sm font-normal;
+  @apply text-left font-mono text-sm tracking-wider;
 }
 
 .educ-year {
-  @apply text-left text-xs font-normal;
+  @apply text-left font-mono text-xs;
   font-family: var(--font-jetbrains-mono), monospace;
-}
-
-.educ-desc {
-  @apply text-left text-base font-normal;
 }
 
 /* ---------------- PROJECTS ---------------- */

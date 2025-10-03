@@ -108,7 +108,7 @@ export function TechStacks() {
         </div>
 
         <div className="text-sm text-gray-400">
-          {currentIndex + 1} of {groups.length}
+          Page {currentIndex + 1} of {groups.length}
         </div>
       </div>
     </section>

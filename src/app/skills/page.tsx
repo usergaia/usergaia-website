@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { TechStacks } from './components/TechStacks';
-import { Certifications } from './components/Certification';
+import { TechStacks } from './skills.components/TechStacks';
+import { Certifications } from './skills.components/Certification';
 
 export default function SkillsPage() {
   return (
