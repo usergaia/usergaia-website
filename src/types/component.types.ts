@@ -6,7 +6,7 @@ export type ProjectProps = {
   desc: string;
   img: string;
   stack: string[];
-  weblink: string | null;
+  weblink?: string;
   ghlink: string;
 };
 
@@ -57,4 +57,12 @@ export type AwardProps = {
   desc: string;
   img: string;
   event: string;
+};
+
+export type GamesProps = {
+  name: string;
+  uid?: string;
+  link?: string;
+  genre: string[];
+  img: string;
 };

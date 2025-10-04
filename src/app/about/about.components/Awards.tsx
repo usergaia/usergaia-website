@@ -25,7 +25,7 @@ export function Awards() {
   return (
     <section className="section-subpage">
       <h1 className="section-subtitle-h1 mb-12 text-center">
-        <span className="section-title-span">Awards & Recognition</span>
+        <span className="text-cyan-200">Awards & Recognition</span>
       </h1>
 
       <div className="mt-4 min-h-[400px]">
@@ -53,7 +53,7 @@ export function Awards() {
             {currentGroup.map((award) => (
               <div
                 key={award.name}
-                className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:shadow-xl hover:shadow-cyan-700"
+                className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700"
               >
                 {/* Award image */}
                 <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-slate-600">
@@ -63,7 +63,7 @@ export function Awards() {
                     fill
                     priority={true}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="transition-all duration-300 group-hover:scale-105"
+                    className="transition-all duration-300"
                     style={{ objectFit: "cover", objectPosition: "center top" }}
                   />
                 </div>
@@ -79,7 +79,7 @@ export function Awards() {
 
                   {/* Main content: Award name */}
                   <div className="flex-1 py-5">
-                    <h3 className="text-xl leading-tight font-bold text-gray-900 transition-colors duration-300 group-hover:text-cyan-600">
+                    <h3 className="text-xl leading-tight font-bold text-gray-900 transition-colors duration-300">
                       {award.name}
                     </h3>
                   </div>

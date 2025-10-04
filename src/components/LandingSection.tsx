@@ -34,7 +34,7 @@ export function Hero() {
                     "... uhh... develop softwares..?",
                     "play games... (add me)",
                     "am sleep-deprived.",
-                    "love coding (occasionally)",
+                    "(sometimes) love coding ",
                   ]}
                   typingSpeed={100}
                   pauseDuration={2500}
@@ -46,20 +46,21 @@ export function Hero() {
 
             <p className="mt-4 text-left text-base font-light text-gray-400 md:text-lg">
               I build software that transforms ideas into practical digital
-              experiences. With a focus on clean design, functionality, and user
-              impact, I enjoy turning concepts into solutions that actually
-              work, and sometimes surprise. Explore my portfolio for a
-              professional showcase of my work, designed for easy navigation and
-              clarity.
+              experiences. I enjoy turning concepts into solutions that work,
+              and sometimes surprise. You may want to check out my portfolio for
+              a more professional showcase of my work, designed for easy
+              navigation.
             </p>
-            <a
-              href="https://www.google.com/"
-              target="_blank"
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/test"
+              // target="_blank"
               rel="noopener noreferrer"
-              className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center text-center"
+              className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center border-slate-500 bg-cyan-400 text-center text-gray-900"
             >
               View Portfolio
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 

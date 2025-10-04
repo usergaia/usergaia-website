@@ -30,7 +30,7 @@ export const projects: ProjectProps[] = [
     desc: "Web application that calculates Cronbach's alpha with support for file upload or manual data entry. Shows detailed step-by-step computations.",
     img: "/test.jpeg",
     stack: ["Vite", "JavaScript", "TailwindCSS"],
-    weblink: "https://cronbach-calc.vercel.app/",
+    weblink: "https://croncalc.vercel.app/",
     ghlink: "https://github.com/usergaia/cronbach-calc",
   },
   {

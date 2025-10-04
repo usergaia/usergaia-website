@@ -1,6 +1,8 @@
+import React from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "@/data/Project";
+import clsx from "clsx";
 
 export function Projects() {
   return (
@@ -13,33 +15,23 @@ export function Projects() {
         {projects.map((p, idx) => (
           <div
             key={p.name}
-            className="group flex h-auto w-full flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-xl hover:shadow-cyan-700 md:h-[460px]"
+            className="flex h-auto w-full flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700 md:h-[460px]"
+            style={{ contentVisibility: "auto" }}
           >
             {/* Project image */}
-            <div
-              className="relative h-[40%] w-full overflow-hidden bg-slate-600"
-              style={{ aspectRatio: "16 / 9" }}
-            >
+            <div className="relative mb-3 h-[180px] w-full overflow-hidden rounded-t-md bg-slate-600">
               <Image
                 src={p.img}
                 alt={`Screenshot of ${p.name}`}
                 fill
+                style={{ objectFit: "cover" }}
                 priority={idx < 3}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="transition-all duration-300 group-hover:scale-105"
-                style={{
-                  objectFit: "cover",
-                  opacity: 0,
-                }}
-                onLoad={(e) => {
-                  e.currentTarget.style.opacity = "1"; // fade in when loaded
-                }}
               />
             </div>
 
             {/* Project content */}
             <div className="flex h-[60%] flex-col p-6">
-              <h3 className="text-base font-semibold text-gray-900 transition-colors duration-300 group-hover:text-cyan-600">
+              <h3 className="text-base font-semibold text-gray-900">
                 {p.name}
               </h3>
               <p className="mt-2 flex-1 font-mono text-sm text-gray-700">
@@ -47,9 +39,9 @@ export function Projects() {
               </p>
 
               <div className="my-4 flex flex-wrap gap-2">
-                {p.stack.map((ps, idx) => (
+                {p.stack.map((ps, stackIdx) => (
                   <span
-                    key={idx}
+                    key={`${p.name}-${ps}-${stackIdx}`}
                     className="rounded-full bg-slate-400/50 px-2 py-1 text-xs text-gray-700"
                   >
                     {ps}
@@ -62,7 +54,10 @@ export function Projects() {
                   href={p.ghlink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition duration-300 hover:border-gray-400/60 hover:bg-gray-400/10 hover:text-gray-500 ${p.weblink ? "flex-1" : "w-full"}`}
+                  className={clsx(
+                    "flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-400/10",
+                    !p.weblink && "flex-1"
+                  )}
                   aria-label="View on GitHub"
                 >
                   <FaGithub className="h-4 w-4" />
@@ -74,7 +69,7 @@ export function Projects() {
                     href={p.weblink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-cyan-600/60 px-4 py-2.5 text-sm font-medium text-cyan-800 transition duration-300 hover:border-cyan-600/60 hover:bg-cyan-400/10"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-cyan-600/60 px-4 py-2.5 text-sm font-medium text-cyan-800 transition-colors duration-200 hover:bg-cyan-400/10"
                   >
                     <span>Visit</span>
                     <FaExternalLinkAlt className="h-3.5 w-3.5" />

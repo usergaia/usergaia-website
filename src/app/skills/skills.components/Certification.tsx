@@ -72,7 +72,7 @@ export function Certifications() {
                       className="mr-5 object-contain"
                     />
                     <div className="flex min-w-0 flex-col text-cyan-400">
-                      <h2 className="text-sm leading-snug font-semibold text-gray-900 group-hover:text-cyan-600">
+                      <h2 className="text-sm leading-snug font-semibold text-gray-900">
                         {cert.title}
                       </h2>
                       <p className="text-xs text-gray-700">{cert.provider}</p>

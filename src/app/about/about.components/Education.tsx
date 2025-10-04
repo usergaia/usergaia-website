@@ -4,7 +4,7 @@ export function Education() {
   return (
     <section className="flex flex-col justify-center px-6 py-20">
       <h1 className="section-subtitle-h1 mb-10 text-center text-cyan-400">
-        <span className="section-title-span">My Origin</span>
+        <span className="text-cyan-200">My Origin</span>
       </h1>
 
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-center gap-10 lg:flex-row">

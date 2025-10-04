@@ -37,7 +37,7 @@ export function Header() {
               key={item}
               target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
-              href={`${item.toLowerCase() === "home" || item.toLowerCase() === "portfolio" ? "/" : `/${item.toLowerCase()}`}`}
+              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/test" : `/${item.toLowerCase()}`}`}
               className="nav-btn"
             >
               {item}
@@ -46,7 +46,12 @@ export function Header() {
         </nav>
 
         {/* Connect button (desktop only) */}
-        <a href="#connect" className={clsx("button hidden")}>
+        <a
+          href="#connect"
+          className={clsx(
+            "button hidden border-slate-500 bg-cyan-400 text-gray-900"
+          )}
+        >
           Connect
         </a>
       </div>
@@ -67,7 +72,7 @@ export function Header() {
               key={item}
               target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
-              href={`${item.toLowerCase() === "home" || item.toLowerCase() === "portfolio" ? "/" : `/${item.toLowerCase()}`}`}
+              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/test" : `/${item.toLowerCase()}`}`}
               onClick={() => setOpen(false)}
               className="block rounded-lg px-6 py-3 text-lg font-medium text-gray-200 transition-colors hover:bg-violet-800/40 hover:text-white hover:brightness-125"
             >

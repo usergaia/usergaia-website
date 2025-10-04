@@ -5,7 +5,7 @@ import {
   FaGithub,
   FaJava,
   FaDocker,
-  FaGit,
+  FaGitAlt,
   FaPython,
 } from "react-icons/fa";
 import {
@@ -107,13 +107,7 @@ export const techStack: StackProps[] = [
   },
 
   // UI
-  {
-    name: "React",
-    icon: FaReact,
-    color: "text-cyan-800",
-    bgColor: "bg-cyan-100",
-    group: "UI",
-  },
+
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,
@@ -147,6 +141,13 @@ export const techStack: StackProps[] = [
     icon: SiShadcnui,
     color: "text-white",
     bgColor: "bg-black",
+    group: "UI",
+  },
+  {
+    name: "React-Icons",
+    icon: FaReact,
+    color: "text-rose-500",
+    bgColor: "bg-white",
     group: "UI",
   },
 
@@ -211,7 +212,7 @@ export const techStack: StackProps[] = [
   },
   {
     name: "Git",
-    icon: FaGit,
+    icon: FaGitAlt,
     color: "text-red-700",
     bgColor: "bg-red-200",
     group: "DevTools",

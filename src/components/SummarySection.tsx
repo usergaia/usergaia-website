@@ -1,15 +1,10 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 export function CLI() {
-  const skills: string[] = [
-    "UI/UX & Web Design",
-    "React & Next.js",
-    "App Prototyping",
-    "Framer Motion",
-    "Tailwind CSS",
-  ];
+  const skills: string[] = ["React & Next.js", "Framer Motion", "Tailwind CSS"];
 
   const stack: string[] = [
     "TypeScript",
@@ -27,16 +22,22 @@ export function CLI() {
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-12">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Nice to meet you!
+            Nice to meet you<span className="section-title-span">!</span>
             {/* <span className="text-fuchsia-400">ega-cli</span> */}
           </h1>
           <p className="mt-4 text-lg text-gray-400 sm:text-xl">
             Learn more about me by entering the following command.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <a href="projects" className="button">
-              View Work
-            </a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/projects"
+              rel="noopener noreferrer"
+              className="button border-slate-500 bg-cyan-400 text-gray-900"
+            >
+              View Projects
+            </motion.a>
             {/* <a
               href="#contact"
               className="rounded-lg border border-gray-600 px-5 py-2 text-sm font-medium text-gray-300 transition hover:border-fuchsia-500 hover:text-fuchsia-400"

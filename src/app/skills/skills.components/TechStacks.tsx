@@ -57,7 +57,7 @@ export function TechStacks() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div
-                    className={`group flex h-16 w-16 items-center rounded-full ${bgColor} ${color} cursor-pointer overflow-hidden shadow-lg transition-all duration-300 hover:w-48 hover:shadow-xl`}
+                    className={`group flex h-16 w-16 items-center rounded-full ${bgColor} ${color} overflow-hidden shadow-lg transition-all duration-300 hover:w-48 hover:shadow-xl`}
                     style={{ minWidth: "4rem" }}
                   >
                     <span className="flex h-16 w-16 items-center justify-center text-2xl">
