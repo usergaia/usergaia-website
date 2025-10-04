@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-export function S2() {
+export function CLI() {
   const skills: string[] = [
     'UI/UX & Web Design',
     'React & Next.js',
@@ -34,10 +34,7 @@ export function S2() {
             Learn more about me by entering the following command.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <a
-              href="projects"
-              className="rounded-lg bg-fuchsia-600 px-5 py-2 text-sm font-medium text-white shadow-md transition hover:bg-fuchsia-500"
-            >
+            <a href="projects" className="button">
               View Work
             </a>
             {/* <a

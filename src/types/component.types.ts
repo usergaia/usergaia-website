@@ -10,6 +10,11 @@ export type ProjectProps = {
   ghlink: string;
 };
 
+// export type ProjectCardProps = {
+//   project: ProjectProps;
+//   idx: number;
+// };
+
 export type ContribProps = {
   name: string;
   desc: string;
@@ -44,4 +49,12 @@ export type CertProps = {
   dateRec: Date;
   link: string;
   logo: string;
+};
+
+export type AwardProps = {
+  name: string;
+  award: string;
+  desc: string;
+  img: string;
+  event: string;
 };

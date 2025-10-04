@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 import clsx from 'clsx';
 import TextType from './TextType';
 
-export function S1() {
+export function Hero() {
   return (
     <div className="page">
       <section
@@ -26,15 +26,15 @@ export function S1() {
 
           <div className="mt-6 w-full max-w-3xl text-left">
             <div className="lg:section-title-h1 flex flex-wrap items-center bg-white bg-clip-text text-left text-2xl font-bold tracking-wide text-transparent sm:text-4xl md:text-5xl">
-              <span className="md:text-4xl">I</span>{' '}
-              <span className="section-title-span ml-1 flex md:text-4xl">
+              <span className="text-[20px] md:text-4xl">I</span>{' '}
+              <span className="section-title-span ml-1 flex text-[20px] md:text-4xl">
                 <TextType
                   text={[
                     'am a Software Developer.',
                     '... uhh... develop softwares..?',
-                    'play games... lots of games.',
+                    'play games... (add me)',
                     'am sleep-deprived.',
-                    "love coding (i don't)",
+                    'love coding (occasionally)',
                   ]}
                   typingSpeed={100}
                   pauseDuration={2500}
@@ -45,12 +45,21 @@ export function S1() {
             </div>
 
             <p className="mt-4 text-left text-base font-light text-gray-400 md:text-lg">
-              Transforming Ideas into Digital Experiences. Lorem ipsum dolor sit
-              amet consectetur, adipisicing elit. Libero laudantium veniam,
-              rerum iusto commodi a, saepe id odio officiis ipsa obcaecati
-              voluptatibus ducimus aspernatur placeat suscipit quibusdam
-              voluptate quod eaque.
+              I build software that transforms ideas into practical digital
+              experiences. With a focus on clean design, functionality, and user
+              impact, I enjoy turning concepts into solutions that actually
+              work, and sometimes surprise. Explore my portfolio for a
+              professional showcase of my work, designed for easy navigation and
+              clarity.
             </p>
+            <a
+              href="https://www.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center text-center"
+            >
+              View Portfolio
+            </a>
           </div>
         </motion.div>
 

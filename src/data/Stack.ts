@@ -28,6 +28,7 @@ import {
   SiPrettier,
   SiEslint,
   SiLucide,
+  SiShadcnui,
 } from 'react-icons/si';
 
 export const techStack: StackProps[] = [
@@ -139,6 +140,13 @@ export const techStack: StackProps[] = [
     icon: SiLucide,
     color: 'text-white',
     bgColor: 'bg-rose-500',
+    group: 'UI',
+  },
+  {
+    name: 'ShadCN',
+    icon: SiShadcnui,
+    color: 'text-white',
+    bgColor: 'bg-black',
     group: 'UI',
   },
 

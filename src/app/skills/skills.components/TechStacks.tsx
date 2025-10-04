@@ -67,7 +67,9 @@ export function TechStacks() {
                       {name}
                     </span>
                   </div>
-                  <span className="mt-2 text-sm md:hidden">{name}</span>
+                  <span className="mt-2 text-sm text-white md:hidden">
+                    {name}
+                  </span>
                 </motion.div>
               ))}
           </motion.div>
@@ -89,7 +91,7 @@ export function TechStacks() {
                 onClick={() => goToGroup(index)}
                 className={`rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'h-3 w-8 bg-blue-500'
+                    ? 'h-3 w-8 bg-cyan-500'
                     : 'h-3 w-3 bg-gray-600 hover:bg-gray-500'
                 }`}
                 aria-label={`Go to ${group}`}

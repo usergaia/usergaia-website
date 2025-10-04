@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <div className={clsx('nav sticky top-0 z-50 w-full shadow-lg')}>
-      <div className="relative mx-auto flex max-w-6xl items-center justify-between rounded-lg px-6 py-4">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo / Mobile Toggle */}
         <div
           className={clsx(

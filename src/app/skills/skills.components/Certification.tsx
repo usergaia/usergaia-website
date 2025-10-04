@@ -28,7 +28,7 @@ export function Certifications() {
   return (
     <>
       <h1 className="section-subtitle-h1 mb-5 text-cyan-400">
-        <span className="section-title-span">My Certifications</span>
+        <span className="section-title-span">Certifications</span>
       </h1>
 
       <div className="mt-4 min-h-101">

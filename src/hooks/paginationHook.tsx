@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { CertProps } from '@/types/component.types';
+import { AwardProps, CertProps } from '@/types/component.types';
 
-export function usePagination(groups: string[] | CertProps[][]) {
+export function usePagination(
+  groups: string[] | CertProps[][] | AwardProps[][]
+) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('');
 
