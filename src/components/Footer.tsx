@@ -1,4 +1,4 @@
-import { socialLinks } from '@/data/Socials';
+import { socialLinks } from "@/data/Socials";
 
 export function Footer() {
   return (

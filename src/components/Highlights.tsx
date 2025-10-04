@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export function S4() {
-  const pjt: string[] = ['Project A', 'Project B', 'Project C', 'Project D'];
+  const pjt: string[] = ["Project A", "Project B", "Project C", "Project D"];
 
   return (
     <>

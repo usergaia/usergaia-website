@@ -1,22 +1,22 @@
-'use client';
-import Image from 'next/image';
-import React from 'react';
+"use client";
+import Image from "next/image";
+import React from "react";
 
 export function CLI() {
   const skills: string[] = [
-    'UI/UX & Web Design',
-    'React & Next.js',
-    'App Prototyping',
-    'Framer Motion',
-    'Tailwind CSS',
+    "UI/UX & Web Design",
+    "React & Next.js",
+    "App Prototyping",
+    "Framer Motion",
+    "Tailwind CSS",
   ];
 
   const stack: string[] = [
-    'TypeScript',
-    'Node.js',
-    'Python',
-    'Figma',
-    'Vercel',
+    "TypeScript",
+    "Node.js",
+    "Python",
+    "Figma",
+    "Vercel",
   ];
 
   return (

@@ -1,5 +1,5 @@
-import { FaGithub } from 'react-icons/fa';
-import { contrib_projects } from '@/data/Project';
+import { FaGithub } from "react-icons/fa";
+import { contrib_projects } from "@/data/Project";
 
 export function Contributor() {
   return (
@@ -12,7 +12,7 @@ export function Contributor() {
         {contrib_projects.map((cp) => (
           <div
             key={cp.name}
-            onClick={() => window.open(cp.ghlink, '_blank')} // whole card clickable
+            onClick={() => window.open(cp.ghlink, "_blank")} // whole card clickable
             className="group flex cursor-pointer flex-col items-start justify-between gap-6 rounded-md border border-slate-400 bg-slate-300 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700 md:flex-row md:items-center md:gap-8 md:p-8"
           >
             {/* Card Content */}

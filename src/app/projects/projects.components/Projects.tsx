@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { projects } from '@/data/Project';
+import Image from "next/image";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { projects } from "@/data/Project";
 
 export function Projects() {
   return (
@@ -18,7 +18,7 @@ export function Projects() {
             {/* Project image */}
             <div
               className="relative h-[40%] w-full overflow-hidden bg-slate-600"
-              style={{ aspectRatio: '16 / 9' }}
+              style={{ aspectRatio: "16 / 9" }}
             >
               <Image
                 src={p.img}
@@ -28,11 +28,11 @@ export function Projects() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="transition-all duration-300 group-hover:scale-105"
                 style={{
-                  objectFit: 'cover',
+                  objectFit: "cover",
                   opacity: 0,
                 }}
                 onLoad={(e) => {
-                  e.currentTarget.style.opacity = '1'; // fade in when loaded
+                  e.currentTarget.style.opacity = "1"; // fade in when loaded
                 }}
               />
             </div>
@@ -62,7 +62,7 @@ export function Projects() {
                   href={p.ghlink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition duration-300 hover:border-gray-400/60 hover:bg-gray-400/10 hover:text-gray-500 ${p.weblink ? 'flex-1' : 'w-full'}`}
+                  className={`flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition duration-300 hover:border-gray-400/60 hover:bg-gray-400/10 hover:text-gray-500 ${p.weblink ? "flex-1" : "w-full"}`}
                   aria-label="View on GitHub"
                 >
                   <FaGithub className="h-4 w-4" />

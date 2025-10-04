@@ -1,16 +1,16 @@
-'use client';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { techStack } from '@/data/Stack';
-import { motion, AnimatePresence } from 'framer-motion';
-import { usePagination } from '@/hooks/paginationHook';
+"use client";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { techStack } from "@/data/Stack";
+import { motion, AnimatePresence } from "framer-motion";
+import { usePagination } from "@/hooks/paginationHook";
 
 export function TechStacks() {
   const groups = [
-    'UI',
-    'Machine Learning',
-    'Framework',
-    'Language',
-    'DevTools',
+    "UI",
+    "Machine Learning",
+    "Framework",
+    "Language",
+    "DevTools",
   ];
   const { direction, currentIndex, goToGroup, prevGroup, nextGroup } =
     usePagination(groups);
@@ -32,19 +32,19 @@ export function TechStacks() {
             custom={direction}
             variants={{
               enter: (dir: string) => ({
-                x: dir === 'right' ? 50 : -50,
+                x: dir === "right" ? 50 : -50,
                 opacity: 0,
               }),
               center: { x: 0, opacity: 1 },
               exit: (dir: string) => ({
-                x: dir === 'right' ? -50 : 50,
+                x: dir === "right" ? -50 : 50,
                 opacity: 0,
               }),
             }}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="flex flex-wrap items-center justify-center gap-5 py-6"
           >
             {techStack
@@ -54,11 +54,11 @@ export function TechStacks() {
                   key={name}
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div
                     className={`group flex h-16 w-16 items-center rounded-full ${bgColor} ${color} cursor-pointer overflow-hidden shadow-lg transition-all duration-300 hover:w-48 hover:shadow-xl`}
-                    style={{ minWidth: '4rem' }}
+                    style={{ minWidth: "4rem" }}
                   >
                     <span className="flex h-16 w-16 items-center justify-center text-2xl">
                       <Icon />
@@ -91,11 +91,11 @@ export function TechStacks() {
                 onClick={() => goToGroup(index)}
                 className={`rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'h-3 w-8 bg-cyan-500'
-                    : 'h-3 w-3 bg-gray-600 hover:bg-gray-500'
+                    ? "h-3 w-8 bg-cyan-500"
+                    : "h-3 w-3 bg-gray-600 hover:bg-gray-500"
                 }`}
                 aria-label={`Go to ${group}`}
-                aria-current={index === currentIndex ? 'true' : 'false'}
+                aria-current={index === currentIndex ? "true" : "false"}
               />
             ))}
           </div>

@@ -1,40 +1,40 @@
-'use client';
-import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
-import clsx from 'clsx';
-import TextType from './TextType';
+"use client";
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import clsx from "clsx";
+import TextType from "./TextType";
 
 export function Hero() {
   return (
     <div className="page">
       <section
         className={clsx(
-          'section-page relative flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4 sm:px-8'
+          "section-page relative flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4 sm:px-8"
         )}
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="flex h-full w-full max-w-4xl -translate-y-20 flex-col items-start justify-center text-left"
         >
           <h1 className="text-left text-4xl font-bold text-gray-100 md:text-6xl lg:text-7xl">
             Edgar Rafael Jr
-            <span className="text-cyan-400">.</span>{' '}
+            <span className="text-cyan-400">.</span>{" "}
           </h1>
 
           <div className="mt-6 w-full max-w-3xl text-left">
             <div className="lg:section-title-h1 flex flex-wrap items-center bg-white bg-clip-text text-left text-2xl font-bold tracking-wide text-transparent sm:text-4xl md:text-5xl">
-              <span className="text-[20px] md:text-4xl">I</span>{' '}
+              <span className="text-[20px] md:text-4xl">I</span>{" "}
               <span className="section-title-span ml-1 flex text-[20px] md:text-4xl">
                 <TextType
                   text={[
-                    'am a Software Developer.',
-                    '... uhh... develop softwares..?',
-                    'play games... (add me)',
-                    'am sleep-deprived.',
-                    'love coding (occasionally)',
+                    "am a Software Developer.",
+                    "... uhh... develop softwares..?",
+                    "play games... (add me)",
+                    "am sleep-deprived.",
+                    "love coding (occasionally)",
                   ]}
                   typingSpeed={100}
                   pauseDuration={2500}
@@ -66,7 +66,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="absolute bottom-40 left-1/2 flex -translate-x-1/2 flex-col items-center text-center"
         >
@@ -75,8 +75,8 @@ export function Hero() {
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              repeatType: 'loop',
-              ease: 'linear',
+              repeatType: "loop",
+              ease: "linear",
             }}
             className="flex flex-col items-center"
           >

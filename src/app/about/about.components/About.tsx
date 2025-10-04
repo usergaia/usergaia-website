@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export function About() {
   return (
@@ -9,7 +9,7 @@ export function About() {
 
           <div
             className="relative flex-shrink-0 overflow-hidden rounded-full border-4 border-gray-800 p-2 shadow-[0_0_25px_rgba(34,211,238,0.3)]"
-            style={{ width: '18rem', height: '18rem' }}
+            style={{ width: "18rem", height: "18rem" }}
           >
             <div className="relative h-full w-full overflow-hidden rounded-full">
               <Image
@@ -31,7 +31,7 @@ export function About() {
             </h1>
             <p className="section-desc mt-6 text-center text-gray-400 sm:text-left">
               Edgar is a simple human. His life was once only filled with
-              rainbows and questionable life choices, until he discovered{' '}
+              rainbows and questionable life choices, until he discovered{" "}
               <b className="text-fuchsia-400">programming</b>. Now it’s mostly
               questionable life choices accompanied with blind optimism,
               expressed in different programming languages.

@@ -1,10 +1,10 @@
-'use client';
-import Image from 'next/image';
-import { awards } from '@/data/Awards';
-import { AwardProps } from '@/types/component.types';
-import { usePagination } from '@/hooks/paginationHook';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+"use client";
+import Image from "next/image";
+import { awards } from "@/data/Awards";
+import { AwardProps } from "@/types/component.types";
+import { usePagination } from "@/hooks/paginationHook";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Split array into chunks for pagination
 const chunkArray = (arr: AwardProps[], size: number): AwardProps[][] => {
@@ -35,19 +35,19 @@ export function Awards() {
             custom={direction}
             variants={{
               enter: (dir: string) => ({
-                x: dir === 'right' ? 50 : -50,
+                x: dir === "right" ? 50 : -50,
                 opacity: 0,
               }),
               center: { x: 0, opacity: 1 },
               exit: (dir: string) => ({
-                x: dir === 'right' ? -50 : 50,
+                x: dir === "right" ? -50 : 50,
                 opacity: 0,
               }),
             }}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {currentGroup.map((award) => (
@@ -64,7 +64,7 @@ export function Awards() {
                     priority={true}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="transition-all duration-300 group-hover:scale-105"
-                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    style={{ objectFit: "cover", objectPosition: "center top" }}
                   />
                 </div>
 
@@ -121,11 +121,11 @@ export function Awards() {
                 key={idx}
                 onClick={() => goToGroup(idx)}
                 aria-label={`Go to page ${idx + 1}`}
-                aria-current={idx === currentIndex ? 'true' : undefined}
+                aria-current={idx === currentIndex ? "true" : undefined}
                 className={`rounded-full transition-all duration-300 ${
                   idx === currentIndex
-                    ? 'h-3 w-8 bg-cyan-500'
-                    : 'h-3 w-3 bg-slate-400 hover:bg-cyan-500'
+                    ? "h-3 w-8 bg-cyan-500"
+                    : "h-3 w-3 bg-slate-400 hover:bg-cyan-500"
                 }`}
               />
             ))}

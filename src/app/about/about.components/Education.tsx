@@ -1,4 +1,4 @@
-import { educ } from '@/data/Educ';
+import { educ } from "@/data/Educ";
 
 export function Education() {
   return (

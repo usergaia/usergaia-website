@@ -1,10 +1,10 @@
-'use client';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { usePagination } from '@/hooks/paginationHook';
-import { certificates } from '@/data/Certs';
-import { CertProps } from '@/types/component.types';
+"use client";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { usePagination } from "@/hooks/paginationHook";
+import { certificates } from "@/data/Certs";
+import { CertProps } from "@/types/component.types";
 
 // 3x3 chunk display
 const chunkArray = (arr: CertProps[], size: number): CertProps[][] => {
@@ -38,19 +38,19 @@ export function Certifications() {
             custom={direction}
             variants={{
               enter: (dir: string) => ({
-                x: dir === 'right' ? 50 : -50,
+                x: dir === "right" ? 50 : -50,
                 opacity: 0,
               }),
               center: { x: 0, opacity: 1 },
               exit: (dir: string) => ({
-                x: dir === 'right' ? -50 : 50,
+                x: dir === "right" ? -50 : 50,
                 opacity: 0,
               }),
             }}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {currentGroup.map((cert) => (
@@ -110,11 +110,11 @@ export function Certifications() {
               key={idx}
               onClick={() => goToGroup(idx)}
               aria-label={`Go to page ${idx + 1}`}
-              aria-current={idx === currentIndex ? 'true' : undefined}
+              aria-current={idx === currentIndex ? "true" : undefined}
               className={`rounded-full transition-all duration-300 ${
                 idx === currentIndex
-                  ? 'h-3 w-8 bg-cyan-500'
-                  : 'h-3 w-3 bg-slate-400 hover:bg-cyan-500'
+                  ? "h-3 w-8 bg-cyan-500"
+                  : "h-3 w-3 bg-slate-400 hover:bg-cyan-500"
               }`}
             />
           ))}
