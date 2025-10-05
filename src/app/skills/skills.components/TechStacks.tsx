@@ -1,7 +1,7 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { techStack } from "@/data/Stack";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePagination } from "@/hooks/paginationHook";
 
 export function TechStacks() {
@@ -12,13 +12,20 @@ export function TechStacks() {
     "Language",
     "DevTools",
   ];
+
   const { direction, currentIndex, goToGroup, prevGroup, nextGroup } =
     usePagination(groups);
 
   const currentGroup = groups[currentIndex];
 
   return (
-    <section className="section-subpage">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="section-subpage"
+    >
       <h1 className="section-subtitle-h1">
         <span className="section-title-span">Tech Stacks</span>
       </h1>
@@ -26,54 +33,53 @@ export function TechStacks() {
       <div className="mt-8 flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold text-gray-200">{currentGroup}</h2>
 
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={currentGroup}
-            custom={direction}
-            variants={{
-              enter: (dir: string) => ({
-                x: dir === "right" ? 50 : -50,
-                opacity: 0,
-              }),
-              center: { x: 0, opacity: 1 },
-              exit: (dir: string) => ({
-                x: dir === "right" ? -50 : 50,
-                opacity: 0,
-              }),
-            }}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="flex flex-wrap items-center justify-center gap-5 py-6"
-          >
-            {techStack
-              .filter((item) => item.group === currentGroup)
-              .map(({ name, icon: Icon, color, bgColor }) => (
-                <motion.div
-                  key={name}
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+        <motion.div
+          key={currentGroup}
+          custom={direction}
+          variants={{
+            enter: (dir: string) => ({
+              x: dir === "right" ? 50 : -50,
+              opacity: 0,
+            }),
+            center: { x: 0, opacity: 1 },
+            exit: (dir: string) => ({
+              x: dir === "right" ? -50 : 50,
+              opacity: 0,
+            }),
+          }}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="flex flex-wrap items-center justify-center gap-5 py-6"
+        >
+          {/* stack bubbles */}
+          {techStack
+            .filter((item) => item.group === currentGroup)
+            .map(({ name, icon: Icon, color, bgColor }) => (
+              <motion.div
+                key={name}
+                className="flex flex-col items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div
+                  className={`group flex h-16 w-16 items-center rounded-full ${bgColor} ${color} overflow-hidden shadow-lg transition-all duration-300 hover:w-48 hover:shadow-xl`}
+                  style={{ minWidth: "4rem" }}
                 >
-                  <div
-                    className={`group flex h-16 w-16 items-center rounded-full ${bgColor} ${color} overflow-hidden shadow-lg transition-all duration-300 hover:w-48 hover:shadow-xl`}
-                    style={{ minWidth: "4rem" }}
-                  >
-                    <span className="flex h-16 w-16 items-center justify-center text-2xl">
-                      <Icon />
-                    </span>
-                    <span className="hidden max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-xs group-hover:opacity-100 md:inline-block">
-                      {name}
-                    </span>
-                  </div>
-                  <span className="mt-2 text-sm text-white md:hidden">
+                  <span className="flex h-16 w-16 items-center justify-center text-2xl">
+                    <Icon />
+                  </span>
+                  <span className="hidden max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-xs group-hover:opacity-100 md:inline-block">
                     {name}
                   </span>
-                </motion.div>
-              ))}
-          </motion.div>
-        </AnimatePresence>
+                </div>
+                <span className="mt-2 text-sm text-white md:hidden">
+                  {name}
+                </span>
+              </motion.div>
+            ))}
+        </motion.div>
 
         <div className="flex items-center gap-3">
           <button
@@ -113,6 +119,6 @@ export function TechStacks() {
           Page {currentIndex + 1} of {groups.length}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

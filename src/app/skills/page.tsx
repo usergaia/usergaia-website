@@ -8,12 +8,9 @@ export default function SkillsPage() {
     <div className="page">
       <Header />
       <main>
-        {/* Section 1: Capabilities */}
         <section className="section-page">
           <Certifications />
         </section>
-
-        {/* Section 2: Tech Stack */}
         <TechStacks />
       </main>
       <Footer />

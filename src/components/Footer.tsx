@@ -8,13 +8,13 @@ export function Footer() {
           <div className="mb-2 text-2xl font-bold text-gray-100">
             ega<span className="text-cyan-500">.</span>
           </div>
-          <code className="text-sm text-gray-500">
+          <code className="text-xs text-gray-500 sm:text-sm">
             &copy; {new Date().getFullYear()} Edgar Rafael Jr. | All rights
             reserved
           </code>
         </div>
 
-        {/* Quick Access Links */}
+        {/* Links */}
         <div className="flex flex-col items-center space-y-3 sm:items-end">
           <p className="text-lg font-semibold text-gray-200">Links</p>
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-2 text-2xl text-gray-500 sm:justify-end lg:grid lg:grid-cols-3">

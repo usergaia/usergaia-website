@@ -66,3 +66,10 @@ export type GamesProps = {
   genre: string[];
   img: string;
 };
+
+export type CLIProps = {
+  whoami: string;
+  ls: string[];
+  files: Record<string, string>; // <key, value>
+  cmd: string[];
+};

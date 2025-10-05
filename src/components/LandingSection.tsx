@@ -12,6 +12,7 @@ export function Hero() {
           "section-page relative flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4 sm:px-8"
         )}
       >
+        {/* name */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,6 +25,7 @@ export function Hero() {
             <span className="text-cyan-400">.</span>{" "}
           </h1>
 
+          {/* textype */}
           <div className="mt-6 w-full max-w-3xl text-left">
             <div className="lg:section-title-h1 flex flex-wrap items-center bg-white bg-clip-text text-left text-2xl font-bold tracking-wide text-transparent sm:text-4xl md:text-5xl">
               <span className="text-[20px] md:text-4xl">I</span>{" "}
@@ -34,7 +36,7 @@ export function Hero() {
                     "... uhh... develop softwares..?",
                     "play games... (add me)",
                     "am sleep-deprived.",
-                    "(sometimes) love coding ",
+                    "(sometimes) love coding.",
                   ]}
                   typingSpeed={100}
                   pauseDuration={2500}
@@ -44,6 +46,7 @@ export function Hero() {
               </span>
             </div>
 
+            {/* desc */}
             <p className="mt-4 text-left text-base font-light text-gray-400 md:text-lg">
               I build software that transforms ideas into practical digital
               experiences. I enjoy turning concepts into solutions that work,

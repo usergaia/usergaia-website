@@ -1,16 +1,23 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 export function About() {
   return (
     <>
       <section className="flex w-full flex-col items-center justify-center border-b border-cyan-400/20 bg-[radial-gradient(circle_at_bottom_left,_rgba(34,211,238,0.1),_transparent_40%),radial-gradient(circle_at_top_right,_rgba(34,211,238,0.05),_transparent_50%)] px-6 py-20 text-center sm:py-10">
-        <div className="mx-auto flex w-auto flex-col items-center gap-8 sm:flex-row">
-          {/* --- Profile Image --- */}
-
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="mx-auto flex w-auto flex-col items-center gap-8 sm:flex-row"
+        >
           <div
             className="relative flex-shrink-0 overflow-hidden rounded-full border-4 border-gray-800 p-2 shadow-[0_0_25px_rgba(34,211,238,0.3)]"
             style={{ width: "18rem", height: "18rem" }}
           >
+            {/* image */}
             <div className="relative h-full w-full overflow-hidden rounded-full">
               <Image
                 src="/me2.png"
@@ -40,7 +47,7 @@ export function About() {
               Life used to be so simple when bugs didn’t require documentation.
             </code>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

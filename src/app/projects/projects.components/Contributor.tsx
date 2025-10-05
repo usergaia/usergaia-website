@@ -1,9 +1,16 @@
 import { FaGithub } from "react-icons/fa";
 import { contrib_projects } from "@/data/Project";
+import { motion } from "framer-motion";
 
 export function Contributor() {
   return (
-    <section className="section-subpage">
+    <motion.section
+      initial={{ opacity: 0, y: -55 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.6 }}
+      className="section-subpage"
+    >
       <h1 className="section-subtitle-h1">
         <span className="section-title-span">Contributor</span>
       </h1>
@@ -31,7 +38,7 @@ export function Contributor() {
               href={cp.weblink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()} // prevents button click from triggering parent card click
               className="w-full rounded-lg border border-cyan-600/60 px-6 py-3 text-center text-sm font-medium text-cyan-600 transition-colors duration-200 hover:bg-cyan-400/10 md:w-auto"
             >
               Visit
@@ -39,6 +46,6 @@ export function Contributor() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
 export function PseudoFooter() {
   return (
     <>
-      <div className="flex w-full flex-col items-center justify-center border-t border-violet-800/50 bg-[#121228] p-8 text-center text-white">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.9 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        animate={{ y: [0, -5, 0] }}
+        className="flex w-full flex-col items-center justify-center border-t border-violet-800/50 bg-[#121228] p-8 text-center text-white"
+      >
         <h1 className="mr-2 mb-4 text-left text-7xl font-bold">
           Shall we<span className="text-cyan-400">?</span>
         </h1>
@@ -21,7 +28,7 @@ export function PseudoFooter() {
         >
           Email me
         </motion.a>
-      </div>
+      </motion.div>
     </>
   );
 }

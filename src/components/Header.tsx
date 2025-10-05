@@ -2,6 +2,7 @@
 import { X, ChevronDown } from "lucide-react";
 import { useDropDown } from "@/hooks/navHook";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 export function Header() {
   const { open, setOpen } = useDropDown();
@@ -18,7 +19,7 @@ export function Header() {
   return (
     <div className={clsx("nav sticky top-0 z-50 w-full shadow-lg")}>
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* Logo / Mobile Toggle */}
+        {/* Mobile Toggle */}
         <div
           className={clsx(
             "nav-text flex cursor-pointer items-center text-2xl font-bold lg:cursor-default"
@@ -46,14 +47,18 @@ export function Header() {
         </nav>
 
         {/* Connect button (desktop only) */}
-        <a
-          href="#connect"
+        <motion.a
+          href="https://www.linkedin.com/in/edgar-rafael-user5777/"
+          target="_blank"
+          rel="noreferrer noopener"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className={clsx(
             "button hidden border-slate-500 bg-cyan-400 text-gray-900"
           )}
         >
           Connect
-        </a>
+        </motion.a>
       </div>
 
       {/* Mobile overlay */}
@@ -67,6 +72,7 @@ export function Header() {
             <X size={32} />
           </button>
 
+          {/* overlay nav items */}
           {links.map((item) => (
             <a
               key={item}

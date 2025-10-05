@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 export function Hobby() {
   return (
     <>
-      <section className="section-subpage">
+      <motion.section
+        initial={{ opacity: 0, y: -55 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.6 }}
+        className="section-subpage"
+      >
         <h1 className="section-subtitle-h1">
           <span className="section-title-span">Beyond the Code</span>
         </h1>
@@ -22,7 +28,7 @@ export function Hobby() {
         >
           View Arcade
         </motion.a>
-      </section>
+      </motion.section>
     </>
   );
 }

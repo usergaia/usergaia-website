@@ -3,17 +3,29 @@ import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "@/data/Project";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 export function Projects() {
   return (
     <div className="section-page items-center">
-      <h1 className="section-title-h1 mb-12 text-cyan-400">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.9 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        animate={{ y: [0, -5, 0] }}
+        className="section-title-h1 mb-12 text-cyan-400"
+      >
         All <span className="section-title-span">Projects</span>
-      </h1>
+      </motion.h1>
 
-      <div className="project-card-container grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div className="project-card-container grid sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, idx) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             key={p.name}
             className="flex h-auto w-full flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700 md:h-[460px]"
             style={{ contentVisibility: "auto" }}
@@ -49,14 +61,14 @@ export function Projects() {
                 ))}
               </div>
 
+              {/* ghlink */}
               <div className="flex items-center gap-3">
                 <a
                   href={p.ghlink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={clsx(
-                    "flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-400/10",
-                    !p.weblink && "flex-1"
+                    "flex items-center justify-center gap-2 rounded-lg border border-slate-400 bg-slate-200/50 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-400/10"
                   )}
                   aria-label="View on GitHub"
                 >
@@ -64,6 +76,7 @@ export function Projects() {
                   <span>GitHub</span>
                 </a>
 
+                {/* weblink */}
                 {p.weblink && (
                   <a
                     href={p.weblink}
@@ -77,9 +90,9 @@ export function Projects() {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

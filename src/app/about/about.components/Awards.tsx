@@ -3,10 +3,9 @@ import Image from "next/image";
 import { awards } from "@/data/Awards";
 import { AwardProps } from "@/types/component.types";
 import { usePagination } from "@/hooks/paginationHook";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Split array into chunks for pagination
 const chunkArray = (arr: AwardProps[], size: number): AwardProps[][] => {
   const chunks = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -17,6 +16,7 @@ const chunkArray = (arr: AwardProps[], size: number): AwardProps[][] => {
 
 export function Awards() {
   const groups = chunkArray(awards, 3); // 3 awards per page
+
   const { direction, currentIndex, goToGroup, prevGroup, nextGroup } =
     usePagination(groups);
   const currentGroup = groups[currentIndex];
@@ -24,88 +24,86 @@ export function Awards() {
 
   return (
     <section className="section-subpage">
-      <h1 className="section-subtitle-h1 mb-12 text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: -55 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="section-subtitle-h1 mb-10 text-center text-cyan-400"
+      >
         <span className="text-cyan-200">Awards & Recognition</span>
-      </h1>
-
+      </motion.h1>
       <div className="mt-4 min-h-[400px]">
-        <AnimatePresence mode="wait" custom={direction} initial={false}>
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={{
-              enter: (dir: string) => ({
-                x: dir === "right" ? 50 : -50,
-                opacity: 0,
-              }),
-              center: { x: 0, opacity: 1 },
-              exit: (dir: string) => ({
-                x: dir === "right" ? -50 : 50,
-                opacity: 0,
-              }),
-            }}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {currentGroup.map((award) => (
-              <div
-                key={award.name}
-                className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700"
-              >
-                {/* Award image */}
-                <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-slate-600">
-                  <Image
-                    src={award.img}
-                    alt={`Screenshot of ${award.name}`}
-                    fill
-                    priority={true}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="transition-all duration-300"
-                    style={{ objectFit: "cover", objectPosition: "center top" }}
-                  />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          key={currentIndex}
+          custom={direction}
+          variants={{
+            enter: (dir: string) => ({
+              x: dir === "right" ? 50 : -50,
+              opacity: 0,
+            }),
+            center: { x: 0, opacity: 1 },
+            exit: (dir: string) => ({
+              x: dir === "right" ? -50 : 50,
+              opacity: 0,
+            }),
+          }}
+          className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {currentGroup.map((award) => (
+            <div
+              key={award.name}
+              className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700"
+            >
+              {/* Award image */}
+              <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-slate-600">
+                <Image
+                  src={award.img}
+                  alt={`Screenshot of ${award.name}`}
+                  fill
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="transition-all duration-300"
+                  style={{ objectFit: "cover", objectPosition: "center top" }}
+                />
+              </div>
+
+              {/* Award content */}
+              <div className="flex flex-col p-6">
+                <div className="flex items-start justify-between gap-3 border-b border-gray-100 pb-4">
+                  <span className="inline-flex items-center rounded-lg bg-cyan-50 px-3 py-1.5 text-sm font-medium text-cyan-700">
+                    {award.event}
+                  </span>
                 </div>
 
-                {/* Award content */}
-                <div className="flex flex-col p-6">
-                  {/* Top section: Event */}
-                  <div className="flex items-start justify-between gap-3 border-b border-gray-100 pb-4">
-                    <span className="inline-flex items-center rounded-lg bg-cyan-50 px-3 py-1.5 text-sm font-medium text-cyan-700">
-                      {award.event}
-                    </span>
-                  </div>
+                <div className="flex-1 py-5">
+                  <h3 className="text-xl leading-tight font-bold text-gray-900 transition-colors duration-300">
+                    {award.name}
+                  </h3>
+                </div>
 
-                  {/* Main content: Award name */}
-                  <div className="flex-1 py-5">
-                    <h3 className="text-xl leading-tight font-bold text-gray-900 transition-colors duration-300">
-                      {award.name}
-                    </h3>
+                <div className="space-y-2 border-t border-gray-100 pt-4">
+                  <div className="inline-block rounded-md bg-gray-100 px-2.5 py-1 text-xs font-semibold tracking-wide text-gray-700 uppercase">
+                    {award.award}
                   </div>
-
-                  {/* Bottom section: Award type + Description */}
-                  <div className="space-y-2 border-t border-gray-100 pt-4">
-                    <div className="inline-block rounded-md bg-gray-100 px-2.5 py-1 text-xs font-semibold tracking-wide text-gray-700 uppercase">
-                      {award.award}
-                    </div>
-                    {award.desc && (
-                      <p className="text-sm leading-relaxed text-gray-600">
-                        {award.desc}
-                      </p>
-                    )}
-                  </div>
+                  {award.desc && (
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      {award.desc}
+                    </p>
+                  )}
                 </div>
               </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Pagination */}
       {awards.length > 3 && (
         <div className="mx-auto mt-8 flex max-w-7xl items-center justify-center gap-6">
-          {/* Prev button */}
           <button
             onClick={prevGroup}
             aria-label="Previous group"
@@ -113,8 +111,6 @@ export function Awards() {
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
-
-          {/* Page indicators */}
           <div className="flex items-center gap-2">
             {groups.map((_, idx) => (
               <button
@@ -131,7 +127,6 @@ export function Awards() {
             ))}
           </div>
 
-          {/* Next button */}
           <button
             onClick={nextGroup}
             aria-label="Next group"
@@ -142,7 +137,6 @@ export function Awards() {
         </div>
       )}
 
-      {/* Page counter */}
       {awards.length > 3 && (
         <div className="mx-auto mt-2 max-w-7xl text-center text-sm text-slate-400">
           {`Page ${currentIndex + 1} of ${groups.length}`}
