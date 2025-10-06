@@ -28,7 +28,7 @@ export function Awards() {
         initial={{ opacity: 0, y: -55 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         className="section-subtitle-h1 mb-10 text-center text-cyan-400"
       >
         <span className="text-cyan-200">Awards & Recognition</span>
@@ -55,10 +55,7 @@ export function Awards() {
           className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {currentGroup.map((award) => (
-            <div
-              key={award.name}
-              className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700"
-            >
+            <div key={award.name} className="project-card">
               {/* Award image */}
               <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-slate-600">
                 <Image
@@ -107,7 +104,7 @@ export function Awards() {
           <button
             onClick={prevGroup}
             aria-label="Previous group"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-gray-100 transition-transform duration-200 hover:scale-110 hover:bg-slate-500"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-600 text-gray-100 transition-transform duration-200 hover:scale-110 hover:bg-slate-500"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -130,7 +127,7 @@ export function Awards() {
           <button
             onClick={nextGroup}
             aria-label="Next group"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-gray-100 transition-transform duration-200 hover:scale-110 hover:bg-slate-500"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-600 text-gray-100 transition-transform duration-200 hover:scale-110 hover:bg-slate-500"
           >
             <ChevronRight className="h-5 w-5" />
           </button>

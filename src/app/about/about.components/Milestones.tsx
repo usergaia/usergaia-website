@@ -1,8 +1,8 @@
 "use client";
-import { educ } from "@/data/Educ";
+import { educ } from "@/data/Milestones";
 import { motion } from "framer-motion";
 
-export function Education() {
+export function Milestone() {
   return (
     <section className="flex flex-col justify-center px-6 py-20">
       <motion.h1
@@ -16,7 +16,7 @@ export function Education() {
       </motion.h1>
 
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-center gap-10 lg:flex-row">
-        {/* Left Description */}
+        {/* left desc */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -33,16 +33,16 @@ export function Education() {
           </div>
         </motion.div>
 
-        {/* Right Timeline */}
+        {/* right timeline */}
         <div className="lg:w-2/3">
           <div className="flex h-auto w-auto items-center justify-center sm:mx-auto sm:w-full lg:w-210">
             <div className="relative m-5">
-              {/* Vertical Timeline Line */}
+              {/* timeline line */}
               <div className="absolute top-0 h-full w-[4px] translate-x-2 bg-cyan-100/50"></div>
 
               {educ.map((e, idx) => (
                 <div key={idx} className="flex items-start justify-start gap-2">
-                  {/* Timeline Dot */}
+                  {/* timeline dot */}
                   <motion.div
                     className="absolute flex h-5 w-5 translate-y-6 items-center justify-center rounded-full border-2 border-cyan-400 bg-[#0a0a1a]"
                     initial={{ scale: 0, opacity: 0 }}
@@ -51,7 +51,7 @@ export function Education() {
                     transition={{ type: "spring", stiffness: 120, damping: 12 }}
                   />
 
-                  {/* Card */}
+                  {/* card */}
                   <motion.div
                     className="m-10 mt-0 mr-0 flex w-auto max-w-4xl flex-col items-start justify-center rounded-2xl border-2 border-slate-400 bg-slate-300 p-5 text-white"
                     initial={{ opacity: 0, y: 60 }}

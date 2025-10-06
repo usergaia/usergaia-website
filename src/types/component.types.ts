@@ -23,6 +23,15 @@ export type ContribProps = {
 };
 
 export type EducProps = {
+  img: string;
+  level: string;
+  name: string;
+  yearIn: string;
+  yearOut: string;
+  desc: string;
+};
+
+export type MSProps = {
   name: string;
   yearStart: number;
   yearEnd: number | string;

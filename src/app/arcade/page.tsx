@@ -71,7 +71,7 @@ export default function ArcadePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700"
+              className="project-card !h-auto"
             >
               {/* Game Image */}
               <div className="relative h-[180px] w-full overflow-hidden rounded-t-xl bg-slate-600 transition-transform duration-300">
