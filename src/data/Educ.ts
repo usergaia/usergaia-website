@@ -30,7 +30,7 @@ export const hsData: EducProps = {
 
 export const collData: EducProps = {
   img: "/educ/fit.png",
-  name: "Future Institute of Technology",
+  name: "FEU Institute of Technology",
   level: "Tertiary - BS Computer Science (SE)",
   yearIn: "2022",
   yearOut: "Present",
