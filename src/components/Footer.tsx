@@ -8,10 +8,14 @@ export function Footer() {
           <div className="mb-2 text-2xl font-bold text-gray-100">
             ega<span className="text-cyan-500">.</span>
           </div>
-          <code className="text-xs text-gray-500 sm:text-sm">
-            &copy; {new Date().getFullYear()} Edgar Rafael Jr. | All rights
-            reserved
-          </code>
+          <div className="flex flex-col">
+            <code className="text-xs text-gray-500 sm:text-sm">
+              &copy; {new Date().getFullYear()} Edgar Rafael Jr.
+            </code>
+            <code className="text-xs text-gray-500 sm:text-sm">
+              All rights reserved
+            </code>
+          </div>
         </div>
 
         {/* Links */}

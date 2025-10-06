@@ -19,7 +19,7 @@ export default function AdvocacyPage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="flex w-full flex-1 items-center justify-center lg:w-auto"
+              className="mr-6 flex w-full flex-1 items-center justify-center lg:w-auto"
             >
               <div className="relative z-1 aspect-square w-full max-w-md overflow-hidden border border-cyan-600/30 bg-gradient-to-br shadow-2xl md:block lg:aspect-[3/4] lg:h-[600px]">
                 <Image
