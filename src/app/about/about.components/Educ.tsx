@@ -14,21 +14,22 @@ export function Education() {
 
   return (
     <section className="flex flex-col justify-center px-6 py-20 text-center">
-      <motion.h1
+      <motion.div
         initial={{ opacity: 0, y: -55 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="section-subtitle-h1 text-center text-cyan-400"
       >
-        <span className="text-cyan-200">Education</span>
-      </motion.h1>
+        <h1 className="section-subtitle-h1 text-center text-cyan-400">
+          <span className="text-cyan-200">Education</span>
+        </h1>
 
-      <p className="m-5 mx-auto flex w-1/2 items-center justify-center text-center text-white">
-        This section highlights my educational background from primary school
-        through tertiary studies. It reflects the foundation and experiences
-        that have guided my academic and personal growth.
-      </p>
+        <p className="m-5 mx-auto flex w-1/2 items-center justify-center text-center text-white">
+          This section highlights my educational background from primary school
+          through tertiary studies. It reflects the foundation and experiences
+          that have guided my academic and personal growth.
+        </p>
+      </motion.div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 lg:flex-row">
         {/* primary */}
