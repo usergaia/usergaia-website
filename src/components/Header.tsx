@@ -9,11 +9,12 @@ export function Header() {
 
   const links: string[] = [
     "Home",
-    "Projects",
-    "Skills",
     "About",
-    "Arcade",
+    "Skills",
+    "Projects",
+    "Advocacy",
     "Portfolio",
+    "Arcade",
   ];
 
   return (
@@ -63,24 +64,22 @@ export function Header() {
 
       {/* Mobile overlay */}
       {open && (
-        <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center space-y-4 bg-[#0a0a1a]/95 backdrop-blur-lg lg:hidden">
-          {/* Close button */}
-          <button
-            onClick={() => setOpen(false)}
-            className="absolute top-7 right-6 text-gray-300"
-          >
-            <X size={32} />
-          </button>
-
-          {/* overlay nav items */}
+        <div className="items-left absolute right-0 left-0 z-50 ml-4 flex w-30 flex-col rounded-b-lg bg-[#0a0a1a]/50 backdrop-blur-md lg:hidden">
+          {/* Overlay nav items */}
           {links.map((item) => (
             <a
               key={item}
               target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
-              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/test" : `/${item.toLowerCase()}`}`}
+              href={`${
+                item.toLowerCase() === "home"
+                  ? "/"
+                  : item.toLowerCase() === "portfolio"
+                    ? "/test"
+                    : `/${item.toLowerCase()}`
+              }`}
               onClick={() => setOpen(false)}
-              className="block rounded-lg px-6 py-3 text-lg font-medium text-gray-200 transition-colors hover:bg-violet-800/40 hover:text-white hover:brightness-125"
+              className="block px-4 py-3 text-left text-sm"
             >
               {item}
             </a>

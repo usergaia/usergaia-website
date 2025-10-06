@@ -27,7 +27,7 @@ export function Projects() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
             key={p.name}
-            className="flex h-auto w-full flex-col overflow-hidden rounded-xl border border-slate-400 bg-slate-300 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700 md:h-[460px]"
+            className="project-card"
             style={{ contentVisibility: "auto" }}
           >
             {/* Project image */}

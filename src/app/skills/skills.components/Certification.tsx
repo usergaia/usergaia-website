@@ -114,9 +114,9 @@ export function Certifications() {
           <button
             onClick={prevGroup}
             aria-label="Previous group"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-gray-100 transition hover:scale-110 hover:bg-slate-500"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-600 text-gray-100 transition hover:scale-110 hover:bg-slate-500"
           >
-            <ChevronLeft className="h-5 w-5 cursor-pointer" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
 
           <div className="flex items-center gap-2">
@@ -138,9 +138,9 @@ export function Certifications() {
           <button
             onClick={nextGroup}
             aria-label="Next group"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-gray-100 transition hover:scale-110 hover:bg-slate-500"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-600 text-gray-100 transition hover:scale-110 hover:bg-slate-500"
           >
-            <ChevronRight className="h-5 w-5 cursor-pointer" />
+            <ChevronRight className="h-5 w-5" />
           </button>
         </div>
 

@@ -84,10 +84,10 @@ export function TechStacks() {
         <div className="flex items-center gap-3">
           <button
             onClick={prevGroup}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 text-white transition-all hover:scale-110 hover:bg-gray-600 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gray-700 text-white transition-all hover:scale-110 hover:bg-gray-600 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
             aria-label="Previous group"
           >
-            <ChevronLeft className="h-5 w-5 cursor-pointer" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
 
           <div className="flex items-center gap-2">
@@ -108,10 +108,10 @@ export function TechStacks() {
 
           <button
             onClick={nextGroup}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 text-white transition-all hover:scale-110 hover:bg-gray-600 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gray-700 text-white transition-all hover:scale-110 hover:bg-gray-600 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
             aria-label="Next group"
           >
-            <ChevronRight className="h-5 w-5 cursor-pointer" />
+            <ChevronRight className="h-5 w-5" />
           </button>
         </div>
 
