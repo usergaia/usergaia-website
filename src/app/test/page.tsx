@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { Construction } from "lucide-react"; // optional icon
+import { Construction } from "lucide-react";
 
 export default function UnderConstruction() {
   return (
