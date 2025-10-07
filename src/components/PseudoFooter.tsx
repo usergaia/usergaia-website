@@ -15,7 +15,7 @@ export function PseudoFooter() {
           Shall we<span className="text-cyan-400">?</span>
         </h1>
 
-        <p className="section-desc mtext-center">
+        <p className="section-desc">
           Always down to build cool stuff, try new stacks, or just talk games.
         </p>
 

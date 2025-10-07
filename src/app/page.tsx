@@ -8,7 +8,7 @@ import { PseudoFooter } from "@/components/PseudoFooter";
 export default function Home() {
   return (
     <>
-      <div className="hide-scrollbar h-screen overflow-x-hidden overflow-y-scroll bg-[#0a0a1a]">
+      <div className="hide-scrollbar h-screen overflow-x-hidden overflow-y-scroll bg-[#0D1117]">
         <Header />
         <Hero />
         <CLI />

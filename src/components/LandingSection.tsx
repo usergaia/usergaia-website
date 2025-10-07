@@ -9,7 +9,7 @@ export function Hero() {
     <div className="page">
       <section
         className={clsx(
-          "section-page relative flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4 sm:px-8"
+          "section-page relative flex min-h-screen items-center justify-center px-4 sm:px-8"
         )}
       >
         {/* name */}
