@@ -66,7 +66,6 @@ const TextType = ({
     [text]
   );
 
-  // Stable reference for memoized speed
   const getRandomSpeed = useCallback(() => {
     if (!variableSpeed) return typingSpeed;
     const { min, max } = variableSpeed;
@@ -180,7 +179,7 @@ const TextType = ({
     reverseMode,
     variableSpeed,
     onSentenceComplete,
-    getRandomSpeed, // <-- always included!
+    getRandomSpeed,
   ]);
 
   const shouldHideCursor =
