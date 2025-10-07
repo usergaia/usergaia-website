@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import { Construction } from "lucide-react";
 
-export default function UnderConstruction() {
+export default function Portfolio() {
   return (
     <div className="page">
       <section

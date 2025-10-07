@@ -21,7 +21,7 @@ export function Footer() {
         {/* Links */}
         <div className="flex flex-col items-center space-y-3 sm:items-end">
           <p className="text-lg font-semibold text-gray-200">Links</p>
-          <div className="flex flex-wrap justify-center gap-x-2 gap-y-2 text-2xl text-gray-500 sm:justify-end lg:grid lg:grid-cols-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-2xl text-gray-500 md:gap-x-2">
             {socialLinks.map(({ name, icon: Icon, url }) => (
               <a
                 key={name}

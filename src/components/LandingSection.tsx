@@ -57,7 +57,7 @@ export function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/test"
+              href="/portfolio"
               // target="_blank"
               rel="noopener noreferrer"
               className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center border-slate-500 bg-cyan-400 text-center text-gray-900"

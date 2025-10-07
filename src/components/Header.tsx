@@ -1,5 +1,5 @@
 "use client";
-import { X, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useDropDown } from "@/hooks/navHook";
 import clsx from "clsx";
 import { motion } from "framer-motion";
@@ -37,9 +37,9 @@ export function Header() {
           {links.map((item) => (
             <a
               key={item}
-              target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
+              // target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
-              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/test" : `/${item.toLowerCase()}`}`}
+              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/portfolio" : `/${item.toLowerCase()}`}`}
               className="nav-btn"
             >
               {item}
@@ -64,18 +64,18 @@ export function Header() {
 
       {/* Mobile overlay */}
       {open && (
-        <div className="items-left absolute right-0 left-0 z-50 ml-4 flex w-30 flex-col rounded-b-lg bg-[#0a0a1a]/50 backdrop-blur-md lg:hidden">
+        <div className="items-left absolute right-0 left-0 z-50 mt-1 ml-4 flex w-30 flex-col rounded-b-lg bg-[#0a0a1a]/95 backdrop-blur-md lg:hidden">
           {/* Overlay nav items */}
           {links.map((item) => (
             <a
               key={item}
-              target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
+              // target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
               href={`${
                 item.toLowerCase() === "home"
                   ? "/"
                   : item.toLowerCase() === "portfolio"
-                    ? "/test"
+                    ? "/portfolio"
                     : `/${item.toLowerCase()}`
               }`}
               onClick={() => setOpen(false)}
@@ -84,6 +84,16 @@ export function Header() {
               {item}
             </a>
           ))}
+          <a
+            href="https://www.linkedin.com/in/edgar-rafael-user5777/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={clsx(
+              "button border-slate-500 bg-cyan-400 text-center text-gray-900"
+            )}
+          >
+            Connect
+          </a>
         </div>
       )}
     </div>
