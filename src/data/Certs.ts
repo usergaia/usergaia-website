@@ -72,7 +72,13 @@ export const certificates: CertProps[] = [
     link: "https://www.freecodecamp.org/certification/usergaia/back-end-development-and-apis",
     logo: "/issuer/fcc.svg",
   },
-
+  {
+    title: "Responsive Web Design",
+    provider: "freeCodeCamp",
+    dateRec: new Date("10/11/2025"),
+    link: "https://www.freecodecamp.org/certification/usergaia/responsive-web-design",
+    logo: "/issuer/fcc.svg",
+  },
   {
     title: "Legacy JavaScript Algorithms and Data Structures",
     provider: "freeCodeCamp",
