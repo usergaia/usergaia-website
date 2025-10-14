@@ -13,7 +13,7 @@ export function Contributor() {
     >
       {/* section header */}
       <h1 className="section-subtitle-h1">
-        <span className="section-title-span">Contributor</span>
+        <span className="section-title-span">Open-source Contributor</span>
       </h1>
 
       {/* projects list */}
