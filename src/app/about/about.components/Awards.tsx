@@ -20,10 +20,10 @@ export function Awards() {
   const { direction, currentIndex, goToGroup, prevGroup, nextGroup } =
     usePagination(groups);
   const currentGroup = groups[currentIndex];
-  console.log(awards.length);
 
   return (
     <section className="section-subpage">
+      {/* section header */}
       <motion.h1
         initial={{ opacity: 0, y: -55 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,6 +33,8 @@ export function Awards() {
       >
         <span className="text-cyan-200">Awards & Recognition</span>
       </motion.h1>
+
+      {/* awards list */}
       <div className="mt-4 min-h-[400px]">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -99,6 +101,7 @@ export function Awards() {
         </motion.div>
       </div>
 
+      {/* Pagination controls */}
       {awards.length > 3 && (
         <div className="mx-auto mt-8 flex max-w-7xl items-center justify-center gap-6">
           <button

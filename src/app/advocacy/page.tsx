@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Code2, TrendingUp, Shield } from "lucide-react";
-import Image from "next/image";
 export default function AdvocacyPage() {
   return (
     <div className="page">
@@ -22,12 +21,13 @@ export default function AdvocacyPage() {
               className="mr-6 flex w-full flex-1 items-center justify-center lg:w-auto"
             >
               <div className="relative z-1 aspect-square w-full max-w-md overflow-hidden border border-cyan-600/30 bg-gradient-to-br shadow-2xl md:block lg:aspect-[3/4] lg:h-[600px]">
-                <Image
-                  src="/adv.gif"
-                  alt="Animated Illustration"
-                  width={30}
-                  height={30}
-                  className="object-fit h-full w-full"
+                <video
+                  src="/adv.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="absolute aspect-square w-full max-w-md translate-x-6 -translate-y-6 overflow-hidden border border-cyan-600/30 bg-cyan-400/50 bg-gradient-to-br shadow-2xl md:block lg:aspect-[3/4] lg:h-[600px]"></div>

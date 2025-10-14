@@ -24,6 +24,7 @@ export function Milestone() {
           viewport={{ once: true }}
           className="lg:w-1/3"
         >
+          {/* left content */}
           <div className="sticky top-24">
             <p className="text-center text-white lg:text-left">
               From curiosity to code, this is where I started piecing together
@@ -69,6 +70,7 @@ export function Milestone() {
                 </div>
               ))}
 
+              {/* placeholder for more */}
               <div className="flex items-start justify-start gap-2">
                 <motion.div
                   className="absolute flex h-5 w-5 translate-y-6 items-center justify-center rounded-full border-2 border-cyan-400 bg-[#0a0a1a]"

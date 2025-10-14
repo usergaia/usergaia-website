@@ -6,7 +6,16 @@ export const projects: ProjectProps[] = [
     desc: "A YOLO-based mobile app for identifying e-waste components from electronic devices. Provides dismantling guides, part valuations, and locates nearby disposal facilities using the Haversine algorithm.",
     img: "/proj/ext.png",
     stack: ["Flutter", "Dart", "Firebase", "YOLOv11"],
-    ghlink: "https://github.com/Thesis-Phaethon/extract_app",
+    gh: [
+      {
+        link: "https://github.com/Thesis-Phaethon/extract_app",
+        label: "Mobile",
+      },
+      {
+        link: "https://github.com/Thesis-Phaethon/e-Xtract",
+        label: "Web",
+      },
+    ],
   },
   {
     name: "ERVirus",
@@ -14,14 +23,22 @@ export const projects: ProjectProps[] = [
     img: "/proj/ervirus.png",
     stack: ["Next.js", "TypeScript", "TailwindCSS"],
     weblink: "https://ervirus.vercel.app/",
-    ghlink: "https://github.com/FuseBucks/ervirus",
+    gh: [
+      {
+        link: "https://github.com/FuseBucks/ervirus",
+      },
+    ],
   },
   {
     name: "FoodCase",
     desc: "A mobile app that uses your chosen location to randomly select nearby food establishments within a category of your choosing. Incorporates geolocation and a randomization to provide objective, category-based dining options in your vicinity.",
     img: "/proj/fc.png",
     stack: ["React Native", "JavaScript"],
-    ghlink: "https://github.com/FuseBucks/food-case",
+    gh: [
+      {
+        link: "https://github.com/FuseBucks/food-case",
+      },
+    ],
   },
   {
     name: "CronCalc",
@@ -29,7 +46,11 @@ export const projects: ProjectProps[] = [
     img: "/proj/cc.png",
     stack: ["Vite", "JavaScript", "TailwindCSS"],
     weblink: "https://croncalc.vercel.app/",
-    ghlink: "https://github.com/usergaia/cronbach-calc",
+    gh: [
+      {
+        link: "https://github.com/usergaia/cronbach-calc",
+      },
+    ],
   },
   {
     name: "Tickr",
@@ -44,7 +65,11 @@ export const projects: ProjectProps[] = [
       "Redis",
     ],
     // weblink: 'https://tickr-alpha.vercel.app/',
-    ghlink: "https://github.com/usergaia/Tickr",
+    gh: [
+      {
+        link: "https://github.com/usergaia/Tickr",
+      },
+    ],
   },
   {
     name: "ticTactoe",
@@ -52,7 +77,11 @@ export const projects: ProjectProps[] = [
     img: "/proj/ttt.png",
     stack: ["Vite", "JavaScript", "TailwindCSS"],
     weblink: "https://ttt-phi-six.vercel.app/",
-    ghlink: "https://github.com/usergaia/ticTactoe",
+    gh: [
+      {
+        link: "https://github.com/usergaia/ticTactoe",
+      },
+    ],
   },
 ];
 
@@ -61,6 +90,6 @@ export const contrib_projects: ContribProps[] = [
     name: "Bettergov",
     desc: "A community-led initiative to create a better and more usable Philippine national government website.",
     weblink: "https://bettergov.ph/",
-    ghlink: "https://github.com/bettergovph/bettergov",
+    gh: "https://github.com/bettergovph/bettergov",
   },
 ];

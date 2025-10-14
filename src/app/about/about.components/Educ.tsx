@@ -36,8 +36,8 @@ export function Education() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.6 }}
           className="project-card relative flex !h-170 w-full flex-col items-center p-4 lg:w-1/5"
         >
           <div className="relative mb-2 h-75 w-full overflow-hidden rounded-lg bg-gray-300">
@@ -112,8 +112,8 @@ export function Education() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.6 }}
           className="project-card relative flex !h-170 w-full flex-col items-center p-4 lg:w-1/5"
         >
           <div className="relative mb-2 h-75 w-full overflow-hidden rounded-lg bg-white">
@@ -163,8 +163,8 @@ export function Education() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.6 }}
           className="project-card relative flex !h-170 w-full flex-col items-center p-4 lg:w-1/5"
         >
           <div className="relative mb-2 h-75 w-full overflow-hidden rounded-lg bg-white">

@@ -11,15 +11,17 @@ export function Contributor() {
       viewport={{ once: true, amount: 0.6 }}
       className="section-subpage"
     >
+      {/* section header */}
       <h1 className="section-subtitle-h1">
         <span className="section-title-span">Contributor</span>
       </h1>
 
+      {/* projects list */}
       <div className="contrib-card-container mx-auto max-w-5xl space-y-6 px-6 py-8">
         {contrib_projects.map((cp) => (
           <div
             key={cp.name}
-            onClick={() => window.open(cp.ghlink, "_blank")}
+            onClick={() => window.open(cp.gh, "_blank")}
             className="group flex cursor-pointer flex-col items-start justify-between gap-6 rounded-md border border-slate-400 bg-slate-300 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-400/60 hover:border-t-slate-600 hover:shadow-lg hover:shadow-cyan-700 md:flex-row md:items-center md:gap-8 md:p-8"
           >
             <div className="flex flex-1 flex-col gap-3">
@@ -34,6 +36,7 @@ export function Contributor() {
               </p>
             </div>
 
+            {/* live link */}
             <a
               href={cp.weblink}
               target="_blank"
