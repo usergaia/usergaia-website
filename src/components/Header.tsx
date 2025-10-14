@@ -55,7 +55,7 @@ export function Header() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={clsx(
-            "button hidden border-slate-500 bg-cyan-400 text-gray-900"
+            "button hidden border-cyan-400 bg-cyan-400 text-gray-900"
           )}
         >
           Connect
@@ -89,7 +89,7 @@ export function Header() {
             target="_blank"
             rel="noreferrer noopener"
             className={clsx(
-              "button border-slate-500 bg-cyan-400 text-center text-gray-900"
+              "button border-cyan-400 bg-cyan-400 text-center text-gray-900"
             )}
           >
             Connect

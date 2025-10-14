@@ -100,9 +100,10 @@ export function Education() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.7 }}
           className="hidden items-center justify-center text-cyan-400 lg:flex"
         >
           <span className="text-2xl">→</span>
@@ -151,9 +152,10 @@ export function Education() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.7 }}
           className="hidden items-center justify-center text-cyan-400 lg:flex"
         >
           <span className="text-2xl">→</span>

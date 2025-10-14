@@ -24,7 +24,7 @@ export function PseudoFooter() {
           whileTap={{ scale: 0.95 }}
           href="mailto:etrafael.dev@gmail.com"
           rel="noopener noreferrer"
-          className="button w-40 border-slate-500 bg-cyan-400 text-gray-900"
+          className="button w-40 border-cyan-400 bg-cyan-400 text-gray-900"
         >
           Email me
         </motion.a>

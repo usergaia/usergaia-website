@@ -42,27 +42,38 @@ export default function ArcadePage() {
   const sortedGames = [...games].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <div className="page flex min-h-screen flex-col bg-gray-900 text-white">
+    <section className="page flex min-h-screen flex-col bg-gray-900 text-white">
       <Header />
 
       <main className="flex-1 px-4 py-8 md:px-0">
         <div className="my-8 border-b border-white/10 pb-5 text-center">
-          <h1 className="section-title-h1 text-5xl font-extrabold tracking-tight">
-            <span className="section-title-span">Arcade</span>
-          </h1>
-          <p className="section-desc mx-auto mt-6 max-w-2xl text-gray-300">
-            A small collection of games I enjoy. From fast-paced action to
-            relaxing adventures, these are the games I spend time on in my free
-            time.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+          >
+            <h1 className="section-title-h1 text-5xl font-extrabold tracking-tight">
+              <span className="section-title-span">Arcade</span>
+            </h1>
+            <p className="section-desc mx-auto mt-6 max-w-2xl text-gray-300">
+              A small collection of games I enjoy. From fast-paced action to
+              relaxing adventures, these are the games I spend time on in my
+              free time.
+            </p>
+          </motion.div>
         </div>
-
-        <h1 className="section-subtitle-h1 my-7 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: -35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="section-subtitle-h1 my-7 text-center lg:mt-15"
+        >
           <span className="text-cyan-200">Some Games I Play</span>
-        </h1>
-
+        </motion.h1>
         {/* Game Grid */}
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-5 sm:grid-cols-2 lg:grid-cols-3">
           {sortedGames.map((game, idx) => (
             <motion.div
               key={game.uid + game.name}
@@ -141,6 +152,6 @@ export default function ArcadePage() {
         </div>
       </main>
       <Footer />
-    </div>
+    </section>
   );
 }

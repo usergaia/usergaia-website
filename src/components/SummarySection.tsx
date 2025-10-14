@@ -33,7 +33,7 @@ export function CLI() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="/projects"
-              className="button border-slate-500 bg-cyan-400 text-gray-900"
+              className="button border-cyan-400 bg-cyan-400 text-gray-900"
             >
               View Projects
             </motion.a>

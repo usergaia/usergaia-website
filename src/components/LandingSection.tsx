@@ -54,16 +54,28 @@ export function Hero() {
               a more professional showcase of my work, designed for easy
               navigation.
             </p>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/portfolio"
-              // target="_blank"
-              rel="noopener noreferrer"
-              className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center border-slate-500 bg-cyan-400 text-center text-gray-900"
-            >
-              View Portfolio
-            </motion.a>
+            <div className="flex justify-start gap-4">
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="/portfolio"
+                // target="_blank"
+                rel="noopener noreferrer"
+                className="button mb-10 flex w-35 translate-y-5 items-center justify-center border-cyan-400 bg-cyan-400 text-center"
+              >
+                View Portfolio
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://flowcv.com/resume/b2iueoij51nw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button mb-10 flex w-35 translate-y-5 items-center justify-center border-fuchsia-500 bg-fuchsia-500 text-center"
+              >
+                View Resume
+              </motion.a>
+            </div>
           </div>
         </motion.div>
 

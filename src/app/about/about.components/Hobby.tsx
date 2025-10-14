@@ -25,7 +25,7 @@ export function Hobby() {
 
         {/* redirect link */}
         <motion.a
-          className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center bg-cyan-400 text-center"
+          className="button mx-auto mb-10 flex w-35 translate-y-5 items-center justify-center border-cyan-400 bg-cyan-400 text-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           rel="noopener noreferrer"
