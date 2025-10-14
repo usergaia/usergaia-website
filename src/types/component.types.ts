@@ -7,12 +7,7 @@ export type ProjectProps = {
   img: string;
   stack: string[];
   weblink?: string;
-  gh: ghProps[];
-};
-
-type ghProps = {
-  link: string;
-  label?: string;
+  gh: string;
 };
 
 // export type ProjectCardProps = {

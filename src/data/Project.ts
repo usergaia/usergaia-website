@@ -2,20 +2,18 @@ import { ProjectProps, ContribProps } from "@/types/component.types";
 
 export const projects: ProjectProps[] = [
   {
-    name: "e-Xtract",
+    name: "e-Xtract (Mobile)",
     desc: "A YOLO-based mobile app for identifying e-waste components from electronic devices. Provides dismantling guides, part valuations, and locates nearby disposal facilities using the Haversine algorithm.",
     img: "/proj/ext.png",
     stack: ["Flutter", "Dart", "Firebase", "YOLOv11"],
-    gh: [
-      {
-        link: "https://github.com/Thesis-Phaethon/extract_app",
-        label: "Mobile",
-      },
-      {
-        link: "https://github.com/Thesis-Phaethon/e-Xtract",
-        label: "Web",
-      },
-    ],
+    gh: "https://github.com/Thesis-Phaethon/extract_app",
+  },
+  {
+    name: "e-Xtract (Web)",
+    desc: "A lightweight Flask-based web version of e-Xtract that performs real-time e-waste component detection via YOLOv11, providing core recognition and reference functionalities accessible through the browser.",
+    img: "/proj/extweb.png",
+    stack: ["Python", "HTML", "CSS", "Flask", "YOLOv11"],
+    gh: "https://github.com/Thesis-Phaethon/e-Xtract",
   },
   {
     name: "ERVirus",
@@ -23,22 +21,14 @@ export const projects: ProjectProps[] = [
     img: "/proj/ervirus.png",
     stack: ["Next.js", "TypeScript", "TailwindCSS"],
     weblink: "https://ervirus.vercel.app/",
-    gh: [
-      {
-        link: "https://github.com/FuseBucks/ervirus",
-      },
-    ],
+    gh: "https://github.com/FuseBucks/ervirus",
   },
   {
     name: "FoodCase",
     desc: "A mobile app that uses your chosen location to randomly select nearby food establishments within a category of your choosing. Incorporates geolocation and a randomization to provide objective, category-based dining options in your vicinity.",
     img: "/proj/fc.png",
     stack: ["React Native", "JavaScript"],
-    gh: [
-      {
-        link: "https://github.com/FuseBucks/food-case",
-      },
-    ],
+    gh: "https://github.com/FuseBucks/food-case",
   },
   {
     name: "CronCalc",
@@ -46,11 +36,7 @@ export const projects: ProjectProps[] = [
     img: "/proj/cc.png",
     stack: ["Vite", "JavaScript", "TailwindCSS"],
     weblink: "https://croncalc.vercel.app/",
-    gh: [
-      {
-        link: "https://github.com/usergaia/cronbach-calc",
-      },
-    ],
+    gh: "https://github.com/usergaia/cronbach-calc",
   },
   {
     name: "Tickr",
@@ -65,11 +51,7 @@ export const projects: ProjectProps[] = [
       "Redis",
     ],
     // weblink: 'https://tickr-alpha.vercel.app/',
-    gh: [
-      {
-        link: "https://github.com/usergaia/Tickr",
-      },
-    ],
+    gh: "https://github.com/usergaia/Tickr",
   },
   {
     name: "ticTactoe",
@@ -77,11 +59,7 @@ export const projects: ProjectProps[] = [
     img: "/proj/ttt.png",
     stack: ["Vite", "JavaScript", "TailwindCSS"],
     weblink: "https://ttt-phi-six.vercel.app/",
-    gh: [
-      {
-        link: "https://github.com/usergaia/ticTactoe",
-      },
-    ],
+    gh: "https://github.com/usergaia/ticTactoe",
   },
 ];
 
