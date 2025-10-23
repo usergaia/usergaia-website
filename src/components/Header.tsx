@@ -13,7 +13,7 @@ export function Header() {
     "Skills",
     "Projects",
     "Advocacy",
-    "Portfolio",
+    // "Portfolio",
     "Arcade",
   ];
 
