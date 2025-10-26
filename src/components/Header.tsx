@@ -13,7 +13,7 @@ export function Header() {
     "Skills",
     "Projects",
     "Advocacy",
-    // "Portfolio",
+    "Portfolio",
     "Arcade",
   ];
 
@@ -37,9 +37,9 @@ export function Header() {
           {links.map((item) => (
             <a
               key={item}
-              // target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
+              target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
-              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "/portfolio" : `/${item.toLowerCase()}`}`}
+              href={`${item.toLowerCase() === "home" ? "/" : item.toLowerCase() === "portfolio" ? "https://etrafaeldev.vercel.app/" : `/${item.toLowerCase()}`}`}
               className="nav-btn"
             >
               {item}
@@ -69,13 +69,13 @@ export function Header() {
           {links.map((item) => (
             <a
               key={item}
-              // target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
+              target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
               rel={`${item.toLowerCase() === "portfolio" ? "noopener noreferrer" : undefined}`}
               href={`${
                 item.toLowerCase() === "home"
                   ? "/"
                   : item.toLowerCase() === "portfolio"
-                    ? "/portfolio"
+                    ? "https://etrafaeldev.vercel.app/"
                     : `/${item.toLowerCase()}`
               }`}
               onClick={() => setOpen(false)}

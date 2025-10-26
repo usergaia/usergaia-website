@@ -48,24 +48,24 @@ export function Hero() {
 
             {/* desc */}
             <p className="mt-4 text-left text-base font-light text-gray-400 md:text-lg">
-              I build software that transforms ideas into practical digital
-              experiences. I enjoy turning concepts into solutions that work,
-              and sometimes surprise.
-              {/* You may want to check out my portfolio for
-              a more professional showcase of my work, designed for easy
-              navigation. */}
+              Welcome to my personal website. This is where I usually try new
+              concepts and something casual dev. I build software that
+              transforms ideas into practical digital experiences. I enjoy
+              turning concepts into solutions that work, and sometimes surprise.
+              You may want to check out my portfolio for a more professional
+              showcase of my work, designed for easy navigation.
             </p>
             <div className="flex justify-start gap-4">
-              {/* <motion.a
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/portfolio"
-                // target="_blank"
+                href="https://etrafaeldev.vercel.app/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="button mb-10 flex w-35 translate-y-5 items-center justify-center border-cyan-400 bg-cyan-400 text-center"
               >
                 View Portfolio
-              </motion.a> */}
+              </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
