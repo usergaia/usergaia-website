@@ -72,7 +72,7 @@ export function Hero() {
                 href="https://flowcv.com/resume/b2iueoij51nw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button mb-10 flex w-35 translate-y-5 items-center justify-center border-fuchsia-500 bg-fuchsia-500 text-center"
+                className="button mb-10 flex w-35 translate-y-5 items-center justify-center shadow-sm !shadow-fuchsia-500/20 border-fuchsia-500 bg-fuchsia-500 text-center"
               >
                 View Resume
               </motion.a>

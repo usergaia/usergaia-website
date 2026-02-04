@@ -10,8 +10,8 @@ export function Header() {
   const links: string[] = [
     "Home",
     "About",
-    "Skills",
-    "Projects",
+    // "Skills",
+    // "Projects",
     "Advocacy",
     "Portfolio",
     "Arcade",
